@@ -60,6 +60,10 @@
   `next/link`, caching/rendering, and Core Web Vitals impacts are addressed.
 - Design system and responsive UX: `docs/designer-system.md` was followed; mobile and desktop
   behavior are covered; accessibility and text fit are checked.
+- **TDD obrigatório: RED → GREEN → REFACTOR**: todo código de produção novo exige teste
+  escrito primeiro. Nenhuma implementação pode começar sem o teste correspondente na fase
+  RED. Cobertura mínima de 80% para código novo. `npm run test` deve passar antes de
+  qualquer commit. Ver `specs/000-tdd-foundation/` para detalhes.
 
 ## Project Structure
 

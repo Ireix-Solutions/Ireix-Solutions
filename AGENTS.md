@@ -14,6 +14,9 @@ Este repositório é o site principal da IREX. Toda implementação deve tratar 
 - Manter as pastas do backend separadas por responsabilidade.
 - Endpoints devem ficar enxutos: validar entrada com Zod, delegar regras de negócio para camadas próprias e retornar respostas consistentes.
 - Nunca colocar regras de negócio complexas diretamente nos endpoints.
+- **TDD é obrigatório:** todo código de produção novo exige teste escrito primeiro (RED → GREEN → REFACTOR). Nenhuma implementação pode começar sem seu teste correspondente definido. Ver `specs/000-tdd-foundation/` para detalhes.
+- **Cobertura mínima:** 80% para código novo. `npm run test` deve passar antes de qualquer commit.
+- **Testes de caracterização:** código legado sem testes exige testes de caracterização ANTES de qualquer alteração.
 
 ## Design System
 
@@ -31,10 +34,11 @@ This version has breaking changes — APIs, conventions, and file structure may 
 <!-- END:nextjs-agent-rules -->
 
 <!-- SPECKIT START -->
-Current feature plan:
+Current feature plans:
 
-`specs/001-home-prototype-page/plan.md`
+- **Foundation:** `specs/000-tdd-foundation/plan.md` — TDD, testes e constituição
+- **Active:** `specs/001-home-prototype-page/plan.md` — Homepage principal
 
 For additional context about technologies to be used, project structure,
-shell commands, and other important information, read the current plan above.
+shell commands, and other important information, read the plans above.
 <!-- SPECKIT END -->

@@ -1,6 +1,10 @@
+"use client";
+
 import Link from "next/link";
+import { motion } from "framer-motion";
 
 import { homePageContent } from "@/app/(pages)/(home)/_components/home-content";
+import { FadeInView } from "@/app/(pages)/(home)/_components/shared/fade-in-view";
 
 export function ProfessionalFooter() {
   const { footer } = homePageContent;
@@ -11,7 +15,7 @@ export function ProfessionalFooter() {
       className="border-t border-[var(--irex-border)] bg-[var(--irex-ink)] text-white"
     >
       <div className="irex-container flex flex-col gap-7 px-12 py-12 max-lg:px-5">
-        <div className="grid gap-9 lg:grid-cols-[420px_minmax(0,1fr)_minmax(0,1fr)_300px]">
+        <FadeInView className="grid gap-9 lg:grid-cols-[420px_minmax(0,1fr)_minmax(0,1fr)_300px]">
           <div>
             <h2 className="text-[1.875rem] font-bold leading-[1.2]">
               {footer.brandName}
@@ -20,18 +24,22 @@ export function ProfessionalFooter() {
               {footer.body}
             </p>
             <div className="mt-4 flex flex-col gap-3 sm:flex-row">
-              <a
+              <motion.a
                 href={footer.ctas[0].href}
                 className="irex-button irex-button--primary"
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
               >
                 {footer.ctas[0].label}
-              </a>
-              <a
+              </motion.a>
+              <motion.a
                 href={footer.ctas[1].href}
                 className="irex-button irex-button--dark-secondary"
+                whileHover={{ scale: 1.03 }}
+                whileTap={{ scale: 0.97 }}
               >
                 {footer.ctas[1].label}
-              </a>
+              </motion.a>
             </div>
           </div>
 
@@ -51,12 +59,14 @@ export function ProfessionalFooter() {
               ))}
             </div>
           </div>
-        </div>
+        </FadeInView>
 
-        <div className="flex flex-col gap-3 border-t border-white/12 pt-4 text-xs text-white/60 sm:flex-row sm:items-center sm:justify-between">
-          <p>{footer.legal}</p>
-          <p>{footer.stack}</p>
-        </div>
+        <FadeInView delay={0.1}>
+          <div className="flex flex-col gap-3 border-t border-white/12 pt-4 text-xs text-white/60 sm:flex-row sm:items-center sm:justify-between">
+            <p>{footer.legal}</p>
+            <p>{footer.stack}</p>
+          </div>
+        </FadeInView>
       </div>
     </footer>
   );

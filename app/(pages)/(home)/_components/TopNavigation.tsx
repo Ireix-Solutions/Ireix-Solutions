@@ -3,6 +3,7 @@
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
 
 import {
   hasConfiguredWhatsApp,
@@ -12,9 +13,23 @@ import {
 export function TopNavigation() {
   const [isOpen, setIsOpen] = useState(false);
   const { navigation } = homePageContent;
+  const { scrollY } = useScroll();
+  const headerBg = useTransform(
+    scrollY,
+    [0, 80],
+    ["rgba(255,255,255,0.9)", "rgba(255,255,255,0.98)"],
+  );
+  const headerShadow = useTransform(
+    scrollY,
+    [0, 80],
+    ["0 0 0 rgba(0,0,0,0)", "0 2px 12px rgba(0,0,0,0.06)"],
+  );
 
   return (
-    <header className="sticky top-0 z-50 border-b border-[var(--irex-border)] bg-white/90 backdrop-blur">
+    <motion.header
+      className="sticky top-0 z-50 border-b border-[var(--irex-border)] backdrop-blur"
+      style={{ backgroundColor: headerBg, boxShadow: headerShadow }}
+    >
       <div className="irex-container flex min-h-[76px] items-center justify-between gap-6 py-4">
         <Link
           href="/"
@@ -50,12 +65,14 @@ export function TopNavigation() {
         </nav>
 
         <div className="hidden items-center gap-6 lg:flex">
-          <a
+          <motion.a
             href={navigation.primaryCta.href}
             className="irex-button irex-button--whatsapp"
+            whileHover={{ scale: 1.03 }}
+            whileTap={{ scale: 0.97 }}
           >
             {navigation.primaryCta.label}
-          </a>
+          </motion.a>
           <a
             href={navigation.secondaryCta.href}
             className="text-sm font-semibold text-[var(--irex-text-subtle)] transition-colors hover:text-[var(--irex-ink)]"
@@ -77,9 +94,13 @@ export function TopNavigation() {
       </div>
 
       {isOpen ? (
-        <div
+        <motion.div
           id="mobile-navigation"
           className="border-t border-[var(--irex-border)] bg-white lg:hidden"
+          initial={{ opacity: 0, height: 0 }}
+          animate={{ opacity: 1, height: "auto" }}
+          exit={{ opacity: 0, height: 0 }}
+          transition={{ duration: 0.25 }}
         >
           <div className="irex-container flex flex-col gap-4 py-5">
             {navigation.links.map((link) => (
@@ -112,8 +133,8 @@ export function TopNavigation() {
               </p>
             ) : null}
           </div>
-        </div>
+        </motion.div>
       ) : null}
-    </header>
+    </motion.header>
   );
 }

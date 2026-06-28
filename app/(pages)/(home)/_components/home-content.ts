@@ -29,7 +29,7 @@ export type ServiceItem = {
     | "Bot"
     | "MessageCircle"
     | "SearchCheck"
-    | "Rocket";
+    | "Cloud";
 };
 
 export type ProcessStep = {
@@ -38,17 +38,16 @@ export type ProcessStep = {
   description: string;
 };
 
-export type Testimonial = {
-  quote: string;
-  supportCopy: string;
-  outcome: string;
-  name: string;
-  role: string;
-  avatar: HomeAsset;
+export type AboutContent = {
+  eyebrow: string;
+  title: string;
+  body: string;
+  resultBadge: { value: string; label: string };
+  flowChips: string[];
 };
 
 export type BlogCard = {
-  tag: "SEO" | "AUTOMACAO" | "IA";
+  tag: "SEO" | "AUTOMAÇÃO" | "IA";
   icon: "SearchCheck" | "Workflow" | "Bot";
   title: string;
   summary: string;
@@ -97,33 +96,29 @@ export const proposalProjectTypes: ProposalProjectType[] = [
 export const homePageContent = {
   navigation: {
     brandName: "Ireix Solution",
-    brandTagline: "solucoes digitais para crescimento",
     links: [
-      { label: "Processo", href: "#processo", variant: "secondary", purpose: "navigation" },
-      { label: "Soluções", href: "#solucoes", variant: "secondary", purpose: "navigation" },
+      { label: "Início", href: "/", variant: "secondary", purpose: "navigation" },
+      { label: "Serviços", href: "#solucoes", variant: "secondary", purpose: "navigation" },
       { label: "Contato", href: "#contato", variant: "secondary", purpose: "navigation" },
     ] satisfies HomeCta[],
     primaryCta: {
-      label: "Falar no WhatsApp",
-      href: buildWhatsAppHref(
-        "Ola! Quero falar sobre uma solucao digital para minha empresa."
-      ),
-      variant: "whatsapp",
-      purpose: "support",
+      label: "Solicitar proposta",
+      href: "#contato",
+      variant: "primary",
+      purpose: "conversion",
     } satisfies HomeCta,
     secondaryCta: {
-      label: "Ja sou cliente",
+      label: "Área do cliente",
       href: "#contato",
       variant: "secondary",
       purpose: "client-access",
     } satisfies HomeCta,
   },
   hero: {
-    chips: ["Mais vendas no digital", "Menos tarefas manuais"],
-    title:
-      "Transforme sua presença digital em vendas, automação e crescimento previsível.",
+    eyebrow: "PRESENÇA DIGITAL E CONVERSÃO",
+    title: "Presença digital profissional para sua empresa crescer.",
     body:
-      "A Ireix Solution cria sites, sistemas, automações e experiências digitais que reduzem processos manuais, capturam oportunidades e deixam sua operação pronta para escalar.",
+      "Um site claro, bonito e direto ao ponto para apresentar seu negócio com confiança e transformar visitantes em contatos qualificados.",
     ctas: [
       {
         label: "Solicitar proposta",
@@ -138,26 +133,22 @@ export const homePageContent = {
         purpose: "navigation",
       },
     ] satisfies HomeCta[],
-    metrics: [
-      { value: "15+", label: "frentes de tecnologia" },
-      { value: "24h", label: "primeiro retorno" },
-      { value: "100%", label: "projeto sob medida" },
-    ],
-    visual: {
-      src: "/images/home/hero-visual.jpg",
-      alt: "Equipe trabalhando em solução digital para crescimento.",
-      width: 1080,
-      height: 810,
-    } satisfies HomeAsset,
-    overlayTitle: "Tecnologia que resolve gargalos reais do negócio.",
-    overlayBody:
-      "Do primeiro contato ao sistema funcionando, com clareza, velocidade e foco em resultado.",
   },
+  about: {
+    eyebrow: "QUEM SOMOS",
+    title: "Digital que faz sua empresa parecer tão boa quanto ela é.",
+    body: "A Ireix cria presença digital para empresas que precisam ser entendidas rápido, transmitir confiança e transformar interesse em conversa comercial. Estratégia, design e execução trabalhando juntos para o negócio parecer tão bom online quanto é na prática.",
+    resultBadge: {
+      value: "+ clareza",
+      label: "para decidir, confiar e chamar",
+    },
+    flowChips: ["Interesse", "Confiança", "Contato"],
+  } satisfies AboutContent,
   services: {
     eyebrow: "SERVIÇOS",
-    title: "Tudo que sua empresa precisa para crescer no digital.",
+    title: "Soluções digitais com a mesma presença premium do seu negócio.",
     body:
-      "Escolha uma entrega pontual ou combine site, sistema, automação, atendimento e infraestrutura em uma solução completa.",
+      "Da primeira impressão ao contato comercial: organizamos site, atendimento e processos para sua empresa vender com mais confiança.",
     cta: {
       label: "Montar meu projeto",
       href: "#contato",
@@ -166,66 +157,66 @@ export const homePageContent = {
     } satisfies HomeCta,
     items: [
       {
-        title: "Sites profissionais",
+        title: "Sites que vendem",
         description:
-          "Sites institucionais, landing pages, páginas de captura, redesign e experiências responsivas com foco em conversão.",
+          "Páginas profissionais com mensagem clara, visual forte e caminho direto para o orçamento.",
         icon: "Monitor",
       },
       {
-        title: "Sistemas web",
+        title: "Sistemas para organizar",
         description:
-          "Painéis administrativos, dashboards, portais com login, plataformas SaaS e sistemas internos sob medida.",
+          "Painéis e portais que tiram processos do improviso e dão mais controle para a equipe.",
         icon: "LayoutDashboard",
       },
       {
-        title: "Interfaces modernas e responsivas",
+        title: "Experiências digitais",
         description:
-          "Sites, dashboards e aplicações web com design system, performance e experiência focadas em conversão de clientes.",
+          "Interfaces modernas para apresentar serviços, captar contatos e conduzir o cliente com fluidez.",
         icon: "Code2",
       },
       {
-        title: "Infraestrutura e APIs",
+        title: "Integrações seguras",
         description:
-          "APIs seguras, autenticação, integrações entre sistemas, bancos de dados e backend escalável preparado para crescer.",
+          "Conectamos ferramentas, cadastros, formulários e rotinas para reduzir retrabalho operacional.",
         icon: "ServerCog",
       },
       {
-        title: "Automações",
+        title: "Automação de processos",
         description:
-          "n8n, webhooks, cron jobs, integrações entre sistemas e processos automáticos de cadastro, cobrança e notificação.",
+          "Fluxos automáticos para notificações, cobranças, cadastros e acompanhamento comercial.",
         icon: "Workflow",
       },
       {
-        title: "IA para empresas",
+        title: "Atendimento inteligente",
         description:
-          "Chatbots, assistentes treinados com documentos, classificação de mensagens e agentes conectados a sistemas internos.",
+          "Assistentes e respostas guiadas para acelerar o primeiro contato sem perder contexto.",
         icon: "Bot",
       },
       {
-        title: "WhatsApp Business API",
+        title: "WhatsApp comercial",
         description:
-          "Captação de leads, notificações, atendimento automatizado, painel de mensagens e automação com IA.",
+          "Captação de leads, mensagens organizadas e atendimento conectado aos seus canais digitais.",
         icon: "MessageCircle",
       },
       {
         title: "SEO e performance",
         description:
-          "SEO técnico, estrutura de blog, sitemap, robots, velocidade, indexação e otimização para Google.",
+          "Estrutura para carregar rápido, aparecer melhor e transformar visitas em oportunidades.",
         icon: "SearchCheck",
       },
       {
-        title: "MVPs e consultoria",
+        title: "Serviços em nuvem",
         description:
-          "MVPs para startups, validação de ideias, arquitetura, revisão de código, deploy e orientação técnica.",
-        icon: "Rocket",
+          "Hospedagem, infraestrutura e deploy escaláveis para manter site e sistemas no ar com estabilidade.",
+        icon: "Cloud",
       },
     ] satisfies ServiceItem[],
   },
   process: {
     eyebrow: "PROCESSO",
-    title: "Da ideia ao software funcionando, com clareza em cada etapa.",
+    title: "Um processo claro para tirar sua presença digital do papel.",
     body:
-      "A proposta é reduzir risco: entender o negócio, priorizar o que dá retorno, prototipar rápido e evoluir com base em dados reais.",
+      "Você acompanha cada etapa com objetividade: entendemos o negócio, desenhamos a experiência, publicamos e evoluímos com base em resultado.",
     cta: {
       label: "Ver metodologia",
       href: "#contato",
@@ -260,11 +251,11 @@ export const homePageContent = {
     ] satisfies ProcessStep[],
   },
   spotlight: {
-    eyebrow: "WHATSAPP + IA",
+    eyebrow: "ATENDIMENTO COMERCIAL",
     title:
-      "Atendimento automatizado que captura leads e responde com contexto.",
+      "Respostas mais rápidas para transformar conversas em oportunidades.",
     body:
-      "Integramos WhatsApp Business API, chatbots, automações e agentes de IA para responder clientes, notificar equipes e transformar conversas em oportunidades.",
+      "Organize seus canais, responda com consistência e crie uma experiência mais clara para quem chega até sua empresa.",
     background: {
       src: "/images/home/whatsapp-spotlight.png",
       alt: "",
@@ -309,60 +300,6 @@ export const homePageContent = {
       composerPlaceholder: "Escreva uma mensagem...",
     },
   },
-  testimonials: {
-    eyebrow: "DEPOIMENTOS",
-    title:
-      "Resultados percebidos por quem precisava vender melhor e operar com mais clareza.",
-    body:
-      "Projetos que unem site, sistema, automacao e atendimento costumam ser avaliados pelo impacto no comercial, na operacao e na velocidade de resposta ao cliente.",
-    items: [
-      {
-        quote:
-          "O novo site organizou nossa apresentacao comercial e aumentou a qualidade dos leads que chegam para o time.",
-        supportCopy:
-          "Em poucas semanas, a equipe passou a atender com mais contexto e menos retrabalho.",
-        outcome: "+38% em leads qualificados",
-        name: "Mariana Costa",
-        role: "Diretora comercial, clinica premium",
-        avatar: {
-          src: "/images/home/testimonial-mariana.jpg",
-          alt: "Mariana Costa",
-          width: 1080,
-          height: 1080,
-        },
-      },
-      {
-        quote:
-          "Automatizamos etapas que antes consumiam horas por dia e finalmente ganhamos previsibilidade no atendimento.",
-        supportCopy:
-          "Hoje o processo e mais rapido, rastreavel e muito menos dependente de tarefas manuais.",
-        outcome: "Atendimento 2.4x mais agil",
-        name: "Rafael Mendes",
-        role: "Operacoes, distribuidora B2B",
-        avatar: {
-          src: "/images/home/testimonial-rafael.jpg",
-          alt: "Rafael Mendes",
-          width: 1080,
-          height: 1080,
-        },
-      },
-      {
-        quote:
-          "A integracao com WhatsApp e formulario deixou o contato comercial simples para o cliente e melhor para nossa equipe.",
-        supportCopy:
-          "Recebemos pedidos mais completos e conseguimos responder com muito mais velocidade.",
-        outcome: "Mais clareza na entrada",
-        name: "Juliana Alves",
-        role: "Socia, escritorio de servicos",
-        avatar: {
-          src: "/images/home/testimonial-juliana.jpg",
-          alt: "Juliana Alves",
-          width: 1080,
-          height: 1080,
-        },
-      },
-    ] satisfies Testimonial[],
-  },
   blog: {
     eyebrow: "CONTEÚDO E ESTRATÉGIA",
     title:
@@ -385,7 +322,7 @@ export const homePageContent = {
         href: "/blog#site-profissional-gera-leads",
       },
       {
-        tag: "AUTOMACAO",
+        tag: "AUTOMAÇÃO",
         icon: "Workflow",
         title: "Quando automatizar o atendimento sem perder qualidade",
         summary:
@@ -428,7 +365,7 @@ export const homePageContent = {
   footer: {
     brandName: "Ireix Solution",
     body:
-      "Sites, sistemas, automações e soluções com IA para empresas que querem vender mais, economizar tempo e crescer com tecnologia moderna.",
+      "Sites profissionais, presença digital e soluções para empresas que querem vender melhor, ganhar confiança e transformar visitantes em oportunidades.",
     ctas: [
       {
         label: "Falar no WhatsApp",

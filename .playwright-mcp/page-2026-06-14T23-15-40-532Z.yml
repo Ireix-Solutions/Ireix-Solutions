@@ -1,0 +1,324 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e4]:
+        - link "Ireix Solution" [ref=e5] [cursor=pointer]:
+          - /url: /
+          - generic [ref=e6]: IR
+          - generic [ref=e7]:
+            - generic [ref=e8]: Ireix Solution
+            - generic [ref=e9]: solucoes digitais para crescimento
+        - button "Abrir menu" [ref=e10]:
+          - img [ref=e11]
+    - main [ref=e12]:
+      - generic [ref=e14]:
+        - generic [ref=e15]:
+          - generic [ref=e16]:
+            - generic [ref=e17]: Mais vendas no digital
+            - generic [ref=e18]: Menos tarefas manuais
+          - heading "Transforme sua presença digital em vendas, automação e crescimento previsível." [level=1] [ref=e19]
+          - paragraph [ref=e20]: A Ireix Solution cria sites, sistemas, automações e experiências digitais que reduzem processos manuais, capturam oportunidades e deixam sua operação pronta para escalar.
+          - generic [ref=e21]:
+            - link "Solicitar proposta" [ref=e22] [cursor=pointer]:
+              - /url: "#contato"
+            - link "Conhecer serviços" [ref=e23] [cursor=pointer]:
+              - /url: "#solucoes"
+          - generic [ref=e24]:
+            - generic [ref=e25]:
+              - generic [ref=e26]: 15+
+              - generic [ref=e27]: frentes de tecnologia
+            - generic [ref=e28]:
+              - generic [ref=e29]: 24h
+              - generic [ref=e30]: primeiro retorno
+            - generic [ref=e31]:
+              - generic [ref=e32]: 100%
+              - generic [ref=e33]: projeto sob medida
+        - generic [ref=e36]:
+          - img "Ilustração abstrata representando uma rede de tecnologia, automação e dados conectados." [ref=e37]
+          - generic [ref=e44]:
+            - heading "Tecnologia que resolve gargalos reais do negócio." [level=2] [ref=e45]
+            - paragraph [ref=e46]: Do primeiro contato ao sistema funcionando, com clareza, velocidade e foco em resultado.
+      - generic [ref=e48]:
+        - generic [ref=e49]:
+          - generic [ref=e50]:
+            - paragraph [ref=e51]: SERVIÇOS
+            - heading "Tudo que sua empresa precisa para crescer no digital." [level=2] [ref=e52]
+            - paragraph [ref=e53]: Escolha uma entrega pontual ou combine site, sistema, automação, atendimento e infraestrutura em uma solução completa.
+          - link "Montar meu projeto" [ref=e54] [cursor=pointer]:
+            - /url: "#contato"
+        - generic [ref=e55]:
+          - article [ref=e57]:
+            - img [ref=e59]
+            - heading "Sites profissionais" [level=3] [ref=e61]
+            - paragraph [ref=e62]: Sites institucionais, landing pages, páginas de captura, redesign e experiências responsivas com foco em conversão.
+          - article [ref=e64]:
+            - img [ref=e66]
+            - heading "Sistemas web" [level=3] [ref=e71]
+            - paragraph [ref=e72]: Painéis administrativos, dashboards, portais com login, plataformas SaaS e sistemas internos sob medida.
+          - article [ref=e74]:
+            - img [ref=e76]
+            - heading "Interfaces modernas e responsivas" [level=3] [ref=e80]
+            - paragraph [ref=e81]: Sites, dashboards e aplicações web com design system, performance e experiência focadas em conversão de clientes.
+          - article [ref=e83]:
+            - img [ref=e85]
+            - heading "Infraestrutura e APIs" [level=3] [ref=e96]
+            - paragraph [ref=e97]: APIs seguras, autenticação, integrações entre sistemas, bancos de dados e backend escalável preparado para crescer.
+          - article [ref=e99]:
+            - img [ref=e101]
+            - heading "Automações" [level=3] [ref=e105]
+            - paragraph [ref=e106]: n8n, webhooks, cron jobs, integrações entre sistemas e processos automáticos de cadastro, cobrança e notificação.
+          - article [ref=e108]:
+            - img [ref=e110]
+            - heading "IA para empresas" [level=3] [ref=e113]
+            - paragraph [ref=e114]: Chatbots, assistentes treinados com documentos, classificação de mensagens e agentes conectados a sistemas internos.
+          - article [ref=e116]:
+            - img [ref=e118]
+            - heading "WhatsApp Business API" [level=3] [ref=e120]
+            - paragraph [ref=e121]: Captação de leads, notificações, atendimento automatizado, painel de mensagens e automação com IA.
+          - article [ref=e123]:
+            - img [ref=e125]
+            - heading "SEO e performance" [level=3] [ref=e129]
+            - paragraph [ref=e130]: SEO técnico, estrutura de blog, sitemap, robots, velocidade, indexação e otimização para Google.
+          - article [ref=e132]:
+            - img [ref=e134]
+            - heading "MVPs e consultoria" [level=3] [ref=e139]
+            - paragraph [ref=e140]: MVPs para startups, validação de ideias, arquitetura, revisão de código, deploy e orientação técnica.
+      - generic [ref=e142]:
+        - generic [ref=e143]:
+          - paragraph [ref=e144]: PROCESSO
+          - heading "Da ideia ao software funcionando, com clareza em cada etapa." [level=2] [ref=e145]
+          - paragraph [ref=e146]: "A proposta é reduzir risco: entender o negócio, priorizar o que dá retorno, prototipar rápido e evoluir com base em dados reais."
+          - link "Ver metodologia" [ref=e147] [cursor=pointer]:
+            - /url: "#contato"
+        - generic [ref=e148]:
+          - article [ref=e149]:
+            - generic [ref=e150]: "01"
+            - generic [ref=e151]:
+              - heading "Diagnóstico" [level=3] [ref=e152]
+              - paragraph [ref=e153]: Mapeamos objetivos, gargalos, público, canais e sistemas existentes.
+          - article [ref=e154]:
+            - generic [ref=e155]: "02"
+            - generic [ref=e156]:
+              - heading "Prototipação" [level=3] [ref=e157]
+              - paragraph [ref=e158]: Criamos a experiência visual e o fluxo principal antes de desenvolver.
+          - article [ref=e159]:
+            - generic [ref=e160]: "03"
+            - generic [ref=e161]:
+              - heading "Desenvolvimento" [level=3] [ref=e162]
+              - paragraph [ref=e163]: Construímos com stack moderna, integrações, segurança básica e performance.
+          - article [ref=e164]:
+            - generic [ref=e165]: "04"
+            - generic [ref=e166]:
+              - heading "Evolução" [level=3] [ref=e167]
+              - paragraph [ref=e168]: Acompanhamos métricas, manutenção, melhorias e novas automações.
+      - generic [ref=e171]:
+        - generic [ref=e172]:
+          - paragraph [ref=e173]: WHATSAPP + IA
+          - heading "Atendimento automatizado que captura leads e responde com contexto." [level=2] [ref=e174]
+          - paragraph [ref=e175]: Integramos WhatsApp Business API, chatbots, automações e agentes de IA para responder clientes, notificar equipes e transformar conversas em oportunidades.
+          - generic [ref=e176]:
+            - link "Quero WhatsApp inteligente" [ref=e177] [cursor=pointer]:
+              - /url: "#contato"
+            - link "Ver integrações" [ref=e178] [cursor=pointer]:
+              - /url: "#solucoes"
+        - generic [ref=e181]:
+          - generic [ref=e182]:
+            - generic [ref=e183]:
+              - img [ref=e185]
+              - generic [ref=e188]:
+                - paragraph [ref=e189]: Ireix Assistant
+                - paragraph [ref=e190]: automacao ativa
+            - generic [ref=e191]: WhatsApp conectado
+          - generic [ref=e192]:
+            - generic [ref=e193]:
+              - paragraph [ref=e194]: Fluxo sugerido
+              - paragraph [ref=e195]: Qualificar leads e encaminhar proposta
+            - generic [ref=e196]: ativo
+          - generic [ref=e197]:
+            - generic [ref=e199]:
+              - paragraph [ref=e200]: Ola! Quero automatizar meu atendimento.
+              - paragraph [ref=e201]: 10:18
+            - generic [ref=e203]:
+              - paragraph [ref=e204]: Perfeito. Posso entender seu volume de mensagens e o principal objetivo?
+              - paragraph [ref=e205]: 10:18
+          - generic [ref=e206]:
+            - generic [ref=e207]: Escreva uma mensagem...
+            - img [ref=e209]
+      - generic [ref=e213]:
+        - generic [ref=e214]:
+          - paragraph [ref=e215]: DEPOIMENTOS
+          - heading "Resultados percebidos por quem precisava vender melhor e operar com mais clareza." [level=2] [ref=e216]
+          - paragraph [ref=e217]: Projetos que unem site, sistema, automacao e atendimento costumam ser avaliados pelo impacto no comercial, na operacao e na velocidade de resposta ao cliente.
+        - generic [ref=e218]:
+          - article [ref=e220]:
+            - generic [ref=e221]:
+              - paragraph [ref=e222]: ★★★★★
+              - heading "O novo site organizou nossa apresentacao comercial e aumentou a qualidade dos leads que chegam para o time." [level=3] [ref=e223]
+              - paragraph [ref=e224]: Em poucas semanas, a equipe passou a atender com mais contexto e menos retrabalho.
+              - generic [ref=e225]: +38% em leads qualificados
+            - generic [ref=e226]:
+              - img "Mariana Costa" [ref=e227]
+              - generic [ref=e228]:
+                - paragraph [ref=e229]: Mariana Costa
+                - paragraph [ref=e230]: Diretora comercial, clinica premium
+          - article [ref=e232]:
+            - generic [ref=e233]:
+              - paragraph [ref=e234]: ★★★★★
+              - heading "Automatizamos etapas que antes consumiam horas por dia e finalmente ganhamos previsibilidade no atendimento." [level=3] [ref=e235]
+              - paragraph [ref=e236]: Hoje o processo e mais rapido, rastreavel e muito menos dependente de tarefas manuais.
+              - generic [ref=e237]: Atendimento 2.4x mais agil
+            - generic [ref=e238]:
+              - img "Rafael Mendes" [ref=e239]
+              - generic [ref=e240]:
+                - paragraph [ref=e241]: Rafael Mendes
+                - paragraph [ref=e242]: Operacoes, distribuidora B2B
+          - article [ref=e244]:
+            - generic [ref=e245]:
+              - paragraph [ref=e246]: ★★★★★
+              - heading "A integracao com WhatsApp e formulario deixou o contato comercial simples para o cliente e melhor para nossa equipe." [level=3] [ref=e247]
+              - paragraph [ref=e248]: Recebemos pedidos mais completos e conseguimos responder com muito mais velocidade.
+              - generic [ref=e249]: Mais clareza na entrada
+            - generic [ref=e250]:
+              - img "Juliana Alves" [ref=e251]
+              - generic [ref=e252]:
+                - paragraph [ref=e253]: Juliana Alves
+                - paragraph [ref=e254]: Socia, escritorio de servicos
+      - generic [ref=e256]:
+        - generic [ref=e257]:
+          - generic [ref=e258]:
+            - paragraph [ref=e259]: CONTEÚDO E ESTRATÉGIA
+            - heading "Aprenda a usar tecnologia para vender mais e operar com menos esforço." [level=2] [ref=e260]
+            - paragraph [ref=e261]: Uma área de conteúdo fortalece autoridade, SEO e educação do cliente antes da conversa comercial.
+          - link "Ver todos os artigos" [ref=e263] [cursor=pointer]:
+            - /url: /blog
+        - generic [ref=e264]:
+          - article [ref=e266]:
+            - generic [ref=e267]:
+              - generic [ref=e268]: SEO
+              - img [ref=e270]
+            - heading "Como um site profissional gera leads todos os meses" [level=3] [ref=e274]
+            - paragraph [ref=e275]: Estrutura, performance, conteúdo e mensuração transformam uma página bonita em um canal de aquisição.
+            - link "Ler artigo" [ref=e276] [cursor=pointer]:
+              - /url: /blog#site-profissional-gera-leads
+              - text: Ler artigo
+              - img [ref=e277]
+          - article [ref=e280]:
+            - generic [ref=e281]:
+              - generic [ref=e282]: AUTOMACAO
+              - img [ref=e284]
+            - heading "Quando automatizar o atendimento sem perder qualidade" [level=3] [ref=e288]
+            - paragraph [ref=e289]: Veja sinais de que sua empresa já pode ganhar tempo com WhatsApp, webhooks e fluxos inteligentes.
+            - link "Ler artigo" [ref=e290] [cursor=pointer]:
+              - /url: /blog#automatizar-atendimento
+              - text: Ler artigo
+              - img [ref=e291]
+          - article [ref=e294]:
+            - generic [ref=e295]:
+              - generic [ref=e296]: IA
+              - img [ref=e298]
+            - heading "Como aplicar IA em processos reais da empresa" [level=3] [ref=e301]
+            - paragraph [ref=e302]: Assistentes, classificação de mensagens e respostas com contexto podem reduzir gargalos operacionais.
+            - link "Ler artigo" [ref=e303] [cursor=pointer]:
+              - /url: /blog#ia-em-processos-reais
+              - text: Ler artigo
+              - img [ref=e304]
+      - generic [ref=e307]:
+        - generic [ref=e308]:
+          - paragraph [ref=e309]: CONTATO
+          - heading "Vamos desenhar a próxima solução digital da sua empresa?" [level=2] [ref=e310]
+          - paragraph [ref=e311]: Conte rapidamente o que você precisa. Podemos começar por um site, MVP, sistema interno, integração com WhatsApp, automação ou consultoria técnica.
+          - list [ref=e312]:
+            - listitem [ref=e313]:
+              - img [ref=e314]
+              - generic [ref=e316]: Resposta inicial em até 24h úteis.
+            - listitem [ref=e317]:
+              - img [ref=e318]
+              - generic [ref=e320]: Diagnóstico objetivo antes da proposta.
+            - listitem [ref=e321]:
+              - img [ref=e322]
+              - generic [ref=e324]: Projetos com foco em performance, clareza e escala.
+          - link "Chamar no WhatsApp" [ref=e325] [cursor=pointer]:
+            - /url: "#contato"
+            - img [ref=e326]
+            - text: Chamar no WhatsApp
+          - paragraph [ref=e328]: WhatsApp comercial em configuração. Use o formulário ou contato@ireixsolution.com.
+        - generic [ref=e330]:
+          - heading "Solicite uma proposta" [level=3] [ref=e331]
+          - generic [ref=e332]:
+            - generic [ref=e333]:
+              - generic [ref=e334]:
+                - text: Nome
+                - textbox "Nome" [ref=e335]
+              - generic [ref=e336]:
+                - text: E-mail
+                - textbox "E-mail" [ref=e337]
+            - generic [ref=e338]:
+              - text: Telefone / WhatsApp
+              - textbox "Telefone / WhatsApp" [ref=e339]
+            - generic [ref=e340]:
+              - text: Tipo de projeto
+              - combobox "Tipo de projeto" [ref=e341]:
+                - option "Selecione" [selected]
+                - option "Site profissional"
+                - option "Sistema web"
+                - option "Automacao"
+                - option "WhatsApp Business API"
+                - option "IA para empresas"
+                - option "SEO e performance"
+                - option "MVP ou consultoria"
+                - option "Outro"
+            - generic [ref=e342]:
+              - text: Mensagem
+              - textbox "Mensagem" [ref=e343]
+            - generic [ref=e344]:
+              - paragraph [ref=e345]: contato@ireixsolution.com
+              - button "Enviar mensagem" [ref=e346]
+            - paragraph
+    - contentinfo [ref=e347]:
+      - generic [ref=e348]:
+        - generic [ref=e349]:
+          - generic [ref=e350]:
+            - heading "Ireix Solution" [level=2] [ref=e351]
+            - paragraph [ref=e352]: Sites, sistemas, automações e soluções com IA para empresas que querem vender mais, economizar tempo e crescer com tecnologia moderna.
+            - generic [ref=e353]:
+              - link "Falar no WhatsApp" [ref=e354] [cursor=pointer]:
+                - /url: "#contato"
+              - link "Solicitar proposta" [ref=e355] [cursor=pointer]:
+                - /url: "#contato"
+          - generic [ref=e356]:
+            - paragraph [ref=e357]: Serviços
+            - generic [ref=e358]:
+              - link "Sites profissionais" [ref=e359] [cursor=pointer]:
+                - /url: /#contato
+              - link "Sistemas web sob medida" [ref=e360] [cursor=pointer]:
+                - /url: /#contato
+              - link "Automações e integrações" [ref=e361] [cursor=pointer]:
+                - /url: /#contato
+              - link "WhatsApp Business API" [ref=e362] [cursor=pointer]:
+                - /url: /#contato
+              - link "IA para empresas" [ref=e363] [cursor=pointer]:
+                - /url: /#contato
+          - generic [ref=e364]:
+            - paragraph [ref=e365]: Empresa
+            - generic [ref=e366]:
+              - link "Processo" [ref=e367] [cursor=pointer]:
+                - /url: /#processo
+              - link "Blog" [ref=e368] [cursor=pointer]:
+                - /url: /blog
+              - link "Consultoria" [ref=e369] [cursor=pointer]:
+                - /url: /#contato
+              - link "Manutenção mensal" [ref=e370] [cursor=pointer]:
+                - /url: /#contato
+              - link "MVPs" [ref=e371] [cursor=pointer]:
+                - /url: /#contato
+          - generic [ref=e372]:
+            - paragraph [ref=e373]: Contato
+            - generic [ref=e374]:
+              - paragraph [ref=e375]: contato@ireixsolution.com
+              - paragraph [ref=e376]: WhatsApp comercial
+              - paragraph [ref=e377]: Atendimento remoto para todo o Brasil
+        - generic [ref=e379]:
+          - paragraph [ref=e380]: © 2026 Ireix Solution. Todos os direitos reservados.
+          - paragraph [ref=e381]: Estratégia digital · Software sob medida · IA aplicada
+  - button "Open Next.js Dev Tools" [ref=e387] [cursor=pointer]:
+    - img [ref=e388]

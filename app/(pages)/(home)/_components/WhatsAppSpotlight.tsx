@@ -10,19 +10,20 @@ export function WhatsAppSpotlight() {
   const { spotlight } = homePageContent;
 
   return (
-    <section className="bg-[var(--irex-ink)]">
-      <div className="irex-container relative overflow-hidden py-14">
-        <div
-          className="pointer-events-none absolute inset-x-0 top-0 h-full overflow-hidden rounded-none bg-cover bg-center bg-no-repeat"
-          style={{ backgroundImage: `url(${spotlight.background.src})` }}
-          aria-hidden="true"
-        >
-          <div className="absolute inset-0 bg-[rgba(7,17,24,0.83)]" />
-        </div>
+    <section className="relative overflow-hidden bg-[var(--irex-ink)]">
+      {/* Full-bleed background image */}
+      <div
+        className="pointer-events-none absolute inset-0 bg-cover bg-center bg-no-repeat"
+        style={{ backgroundImage: `url(${spotlight.background.src})` }}
+        aria-hidden="true"
+      >
+        <div className="absolute inset-0 bg-[rgba(7,17,24,0.83)]" />
+      </div>
 
+      <div className="irex-container relative py-[64px] lg:px-[56px]">
         <div className="relative grid items-center gap-8 lg:min-h-[560px] lg:grid-cols-[minmax(0,1fr)_390px]">
           <FadeInView className="max-w-[35rem]" direction="left">
-            <p className="text-xs font-bold tracking-[0.02em] text-[var(--irex-gold)]">
+            <p className="text-[11px] font-[800] tracking-[0.09em] text-[#B9F7FF]">
               {spotlight.eyebrow}
             </p>
             <h2 className="mt-3 text-[2.1rem] leading-[1.12] font-medium text-white sm:text-[2.6rem] lg:text-[2.625rem]">
@@ -34,7 +35,7 @@ export function WhatsAppSpotlight() {
             <div className="mt-6 flex flex-col gap-3 sm:flex-row">
               <motion.a
                 href={spotlight.ctas[0].href}
-                className="irex-button irex-button--primary"
+                className="irex-button bg-[#44B8D2] text-white shadow-[0_14px_30px_-12px_rgba(68,184,210,0.4)]"
                 whileHover={{ scale: 1.03 }}
                 whileTap={{ scale: 0.97 }}
               >

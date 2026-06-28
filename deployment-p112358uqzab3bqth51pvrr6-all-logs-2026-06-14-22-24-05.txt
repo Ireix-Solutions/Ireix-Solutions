@@ -1,0 +1,214 @@
+2026-Jun-14 22:20:50.089361 Docker 29.4.2 with BuildKit and Buildx detected on deployment server (localhost).
+2026-Jun-14 22:20:50.106089 Starting deployment of Ireix-Solutions/Ireix-Solutions:main to localhost.
+2026-Jun-14 22:20:50.619820 Preparing container with helper image: ghcr.io/coollabsio/coolify-helper:1.0.14
+2026-Jun-14 22:20:50.837278 [DEBUG] [CMD]: docker stop --time=30 p112358uqzab3bqth51pvrr6
+2026-Jun-14 22:20:50.837278 [DEBUG] Flag --time has been deprecated, use --timeout instead
+2026-Jun-14 22:20:50.842897 [DEBUG] Error response from daemon: No such container: p112358uqzab3bqth51pvrr6
+2026-Jun-14 22:20:51.172183 [DEBUG] [CMD]: docker run -d --network 'coolify' --name p112358uqzab3bqth51pvrr6  --rm -v /root/.docker/buildx:/root/.docker/buildx -v /var/run/docker.sock:/var/run/docker.sock ghcr.io/coollabsio/coolify-helper:1.0.14
+2026-Jun-14 22:20:51.172183 [DEBUG] 71eeb0dadf180b8eebd6fd4de5514ce4562314cee46c0bb3eb8d590bbb841754
+2026-Jun-14 22:20:53.501641 [DEBUG] [CMD]: docker exec p112358uqzab3bqth51pvrr6 bash -c 'GIT_SSH_COMMAND="ssh -o ConnectTimeout=30 -p 22 -o Port=22 -o LogLevel=ERROR -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" git ls-remote '\''https://x-access-token:<REDACTED>@github.com/Ireix-Solutions/Ireix-Solutions.git'\'' '\''refs/heads/main'\'''
+2026-Jun-14 22:20:53.501641 [DEBUG] e08ac24d86d1693c58033f0409b77a7f69b487fb	refs/heads/main
+2026-Jun-14 22:20:53.794051 ----------------------------------------
+2026-Jun-14 22:20:53.809279 Importing Ireix-Solutions/Ireix-Solutions:main (commit sha e08ac24d86d1693c58033f0409b77a7f69b487fb) to /artifacts/p112358uqzab3bqth51pvrr6.
+2026-Jun-14 22:20:54.078157 [DEBUG] [CMD]: docker exec p112358uqzab3bqth51pvrr6 bash -c 'git -c '\''url.https://x-access-token:<REDACTED>@github.com/.insteadOf=https://github.com/'\'' -c http.version=HTTP/1.1 clone --depth=1 --recurse-submodules --shallow-submodules -b '\''main'\'' '\''https:<REDACTED>@github.com/Ireix-Solutions/Ireix-Solutions.git'\'' '\''/artifacts/p112358uqzab3bqth51pvrr6'\'' && cd '\''/artifacts/p112358uqzab3bqth51pvrr6'\'' && GIT_SSH_COMMAND="ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" git -c '\''url.https://x-access-token:<REDACTED>@github.com/.insteadOf=https://github.com/'\'' -c http.version=HTTP/1.1 fetch --depth=1 origin '\''e08ac24d86d1693c58033f0409b77a7f69b487fb'\'' && git -c '\''url.https:<REDACTED>@github.com/.insteadOf=https://github.com/'\'' -c http.version=HTTP/1.1 -c advice.detachedHead=false checkout '\''e08ac24d86d1693c58033f0409b77a7f69b487fb'\'' >/dev/null 2>&1 && cd '\''/artifacts/p112358uqzab3bqth51pvrr6'\'' && if [ -f .gitmodules ]; then git -c '\''url.https:<REDACTED>@github.com/.insteadOf=https://github.com/'\'' -c http.version=HTTP/1.1 submodule sync && GIT_SSH_COMMAND="ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" git -c '\''url.https:<REDACTED>@github.com/.insteadOf=https://github.com/'\'' -c http.version=HTTP/1.1 submodule update --init --recursive --depth=1; fi && cd '\''/artifacts/p112358uqzab3bqth51pvrr6'\'' && GIT_SSH_COMMAND="ssh -o StrictHostKeyChecking=no -o UserKnownHostsFile=/dev/null" git -c '\''url.https:<REDACTED>@github.com/.insteadOf=https://github.com/'\'' -c http.version=HTTP/1.1 lfs pull'
+2026-Jun-14 22:<REDACTED>@sha256:87999aa3d42bdc6bea60565083ee17e86d1f3339802f543c0d03998580f9cb89
+2026-Jun-14 22:21:02.937293 [DEBUG] #3 resolve docker.io/docker/dockerfile:1@sha256:87999aa3d42bdc6bea60565083ee17e86d1f3339802f543c0d03998580f9cb89 0.0s done
+2026-Jun-14 22:21:02.937293 [DEBUG] #3 CACHED
+2026-Jun-14 22:21:03.114261 [DEBUG] #4 [internal] load metadata for docker.io/library/node:22-alpine
+2026-Jun-14 22:21:03.728374 [DEBUG] #4 DONE 0.6s
+2026-Jun-14 22:21:03.924045 [DEBUG] #5 [internal] load .dockerignore
+2026-Jun-14 22:21:03.924045 [DEBUG] #5 transferring context: 134B done
+2026-Jun-14 22:21:03.924045 [DEBUG] #5 DONE 0.0s
+2026-Jun-14 22:21:04.052393 [DEBUG] #6 [base 1/2] FROM docker.io/library/node:22-alpine@sha256:9385cd9f3001dfc3431e8ead12c43e9e1f87cc1b9b5c6cfd0f73865d405b27c4
+2026-Jun-14 22:21:04.052393 [DEBUG] #6 resolve docker.io/library/node:22-alpine@sha256:9385cd9f3001dfc3431e8ead12c43e9e1f87cc1b9b5c6cfd0f73865d405b27c4 0.1s done
+2026-Jun-14 22:21:04.052393 [DEBUG] #6 DONE 0.1s
+2026-Jun-14 22:21:04.052393 [DEBUG] 
+2026-Jun-14 22:21:04.052393 [DEBUG] #7 [base 2/2] WORKDIR /app
+2026-Jun-14 22:21:04.052393 [DEBUG] #7 CACHED
+2026-Jun-14 22:21:04.052393 [DEBUG] 
+2026-Jun-14 22:21:04.052393 [DEBUG] #8 [runner 1/4] RUN addgroup --system --gid 1001 nodejs   && adduser --system --uid 1001 nextjs
+2026-Jun-14 22:21:04.560434 [DEBUG] #8 DONE 0.4s
+2026-Jun-14 22:21:04.560434 [DEBUG] 
+2026-Jun-14 22:21:04.560434 [DEBUG] #9 [internal] load build context
+2026-Jun-14 22:21:04.560434 [DEBUG] #9 transferring context: 7.12MB 0.5s done
+2026-Jun-14 22:21:04.703009 [DEBUG] #9 DONE 0.6s
+2026-Jun-14 22:21:04.715779 [DEBUG] #10 [deps 1/2] COPY package.json package-lock.json ./
+2026-Jun-14 22:21:04.715779 [DEBUG] #10 DONE 0.1s
+2026-Jun-14 22:21:04.865939 [DEBUG] #11 [deps 2/2] RUN npm ci
+2026-Jun-14 22:21:08.110445 [DEBUG] #11 3.395 npm error code EUSAGE
+2026-Jun-14 22:21:08.110445 [DEBUG] #11 3.395 npm error
+2026-Jun-14 22:21:08.110445 [DEBUG] #11 3.395 npm error `npm ci` can only install packages when your package.json and package-lock.json or npm-shrinkwrap.json are in sync. Please update your lock file with `npm install` before continuing.
+2026-Jun-14 22:21:08.110445 [DEBUG] #11 3.395 npm error
+2026-Jun-14 22:21:08.110445 [DEBUG] #11 3.395 npm error Missing: @emnapi/runtime@1.11.1 from lock file
+2026-Jun-14 22:21:08.110445 [DEBUG] #11 3.395 npm error Missing: @emnapi/core@1.11.1 from lock file
+2026-Jun-14 22:21:08.110445 [DEBUG] #11 3.395 npm error Invalid: lock file's @emnapi/wasi-threads@1.2.1 does not satisfy @emnapi/wasi-threads@1.2.2
+2026-Jun-14 22:21:08.110445 [DEBUG] #11 3.395 npm error Missing: @emnapi/core@1.10.0 from lock file
+2026-Jun-14 22:21:08.110445 [DEBUG] #11 3.395 npm error Missing: @emnapi/runtime@1.10.0 from lock file
+2026-Jun-14 22:21:08.110445 [DEBUG] #11 3.395 npm error Missing: @emnapi/core@1.10.0 from lock file
+2026-Jun-14 22:21:08.110445 [DEBUG] #11 3.395 npm error Missing: @emnapi/runtime@1.10.0 from lock file
+2026-Jun-14 22:21:08.110445 [DEBUG] #11 3.395 npm error Missing: @emnapi/wasi-threads@1.2.1 from lock file
+2026-Jun-14 22:21:08.110445 [DEBUG] #11 3.395 npm error Missing: @emnapi/wasi-threads@1.2.1 from lock file
+2026-Jun-14 22:21:08.110445 [DEBUG] #11 3.395 npm error
+2026-Jun-14 22:21:08.110445 [DEBUG] #11 3.395 npm error Clean install a project
+2026-Jun-14 22:21:08.110445 [DEBUG] #11 3.395 npm error
+2026-Jun-14 22:21:08.110445 [DEBUG] #11 3.395 npm error Usage:
+2026-Jun-14 22:21:08.110445 [DEBUG] #11 3.395 npm error npm ci
+2026-Jun-14 22:21:08.110445 [DEBUG] #11 3.395 npm error
+2026-Jun-14 22:21:08.110445 [DEBUG] #11 3.395 npm error Options:
+2026-Jun-14 22:21:08.110445 [DEBUG] #11 3.395 npm error [--install-strategy <hoisted|nested|shallow|linked>] [--legacy-bundling]
+2026-Jun-14 22:21:08.110445 [DEBUG] #11 3.395 npm error [--global-style] [--omit <dev|optional|peer> [--omit <dev|optional|peer> ...]]
+2026-Jun-14 22:21:08.110445 [DEBUG] #11 3.395 npm error [--include <prod|dev|optional|peer> [--include <prod|dev|optional|peer> ...]]
+2026-Jun-14 22:21:08.110445 [DEBUG] #11 3.395 npm error [--strict-peer-deps] [--foreground-scripts] [--ignore-scripts] [--no-audit]
+2026-Jun-14 22:21:08.110445 [DEBUG] #11 3.395 npm error [--no-bin-links] [--no-fund] [--dry-run]
+2026-Jun-14 22:21:08.110445 [DEBUG] #11 3.395 npm error [-w|--workspace <workspace-name> [-w|--workspace <workspace-name> ...]]
+2026-Jun-14 22:21:08.110445 [DEBUG] #11 3.395 npm error [-ws|--workspaces] [--include-workspace-root] [--install-links]
+2026-Jun-14 22:21:08.110445 [DEBUG] #11 3.395 npm error
+2026-Jun-14 22:21:08.117117 [DEBUG] #11 3.395 npm error aliases: clean-install, ic, install-clean, isntall-clean
+2026-Jun-14 22:21:08.117117 [DEBUG] #11 3.395 npm error
+2026-Jun-14 22:21:08.117117 [DEBUG] #11 3.395 npm error Run "npm help ci" for more info
+2026-Jun-14 22:21:08.265864 [DEBUG] #11 3.399 npm notice
+2026-Jun-14 22:21:08.265864 [DEBUG] #11 3.399 npm notice New major version of npm available! 10.9.8 -> 11.17.0
+2026-Jun-14 22:21:08.265864 [DEBUG] #11 3.399 npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.17.0
+2026-Jun-14 22:<REDACTED>@11.17.0
+2026-Jun-14 22:21:08.265864 [DEBUG] #11 3.399 npm notice
+2026-Jun-14 22:21:08.265864 [DEBUG] #11 3.400 npm error A complete log of this run can be found in: /root/.npm/_logs/2026-06-14T22_21_05_567Z-debug-0.log
+2026-Jun-14 22:21:08.282859 [DEBUG] #11 ERROR: process "/bin/sh -c npm ci" did not complete successfully: exit code: 1
+2026-Jun-14 22:21:08.380175 [DEBUG] ------
+2026-Jun-14 22:21:08.380175 [DEBUG] > [deps 2/2] RUN npm ci:
+2026-Jun-14 22:21:08.380175 [DEBUG] 3.395 npm error
+2026-Jun-14 22:21:08.380175 [DEBUG] 3.395 npm error aliases: clean-install, ic, install-clean, isntall-clean
+2026-Jun-14 22:21:08.380175 [DEBUG] 3.395 npm error
+2026-Jun-14 22:21:08.380175 [DEBUG] 3.395 npm error Run "npm help ci" for more info
+2026-Jun-14 22:21:08.380175 [DEBUG] 3.399 npm notice
+2026-Jun-14 22:21:08.380175 [DEBUG] 3.399 npm notice New major version of npm available! 10.9.8 -> 11.17.0
+2026-Jun-14 22:21:08.380175 [DEBUG] 3.399 npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.17.0
+2026-Jun-14 22:<REDACTED>@11.17.0
+2026-Jun-14 22:21:08.380175 [DEBUG] 3.399 npm notice
+2026-Jun-14 22:21:08.380175 [DEBUG] 3.400 npm error A complete log of this run can be found in: /root/.npm/_logs/2026-06-14T22_21_05_567Z-debug-0.log
+2026-Jun-14 22:21:08.380175 [DEBUG] ------
+2026-Jun-14 22:21:08.392573 [DEBUG] Dockerfile:17
+2026-Jun-14 22:21:08.392573 [DEBUG] --------------------
+2026-Jun-14 22:21:08.392573 [DEBUG] 15 |     ARG COOLIFY_RESOURCE_UUID=blkxd5d9qxycgil459hqesd3
+2026-Jun-14 22:21:08.392573 [DEBUG] 16 |     COPY package.json package-lock.json ./
+2026-Jun-14 22:21:08.392573 [DEBUG] 17 | >>> RUN npm ci
+2026-Jun-14 22:21:08.392573 [DEBUG] 18 |
+2026-Jun-14 22:21:08.392573 [DEBUG] 19 |     # 2. Build da aplicação
+2026-Jun-14 22:21:08.392573 [DEBUG] --------------------
+2026-Jun-14 22:21:08.392573 [DEBUG] ERROR: failed to build: failed to solve: process "/bin/sh -c npm ci" did not complete successfully: exit code: 1
+2026-Jun-14 22:21:08.392573 [DEBUG] exit status 1
+2026-Jun-14 22:21:08.585894 ========================================
+2026-Jun-14 22:21:08.599324 Deployment failed: Command execution failed (exit code 1): docker exec p112358uqzab3bqth51pvrr6 bash -c 'bash /artifacts/build.sh'
+2026-Jun-14 22:21:08.599324 Error: #0 building with "default" instance using docker driver
+2026-Jun-14 22:21:08.599324 
+2026-Jun-14 22:21:08.599324 #1 [internal] load build definition from Dockerfile
+2026-Jun-14 22:21:08.599324 #1 transferring dockerfile: 1.74kB 0.0s done
+2026-Jun-14 22:21:08.599324 #1 DONE 0.1s
+2026-Jun-14 22:21:08.599324 
+2026-Jun-14 22:21:08.599324 #2 resolve image config for docker-image://docker.io/docker/dockerfile:1
+2026-Jun-14 22:21:08.599324 #2 DONE 0.7s
+2026-Jun-14 22:21:08.599324 
+2026-Jun-14 22:21:08.599324 #3 docker-image://docker.io/docker/dockerfile:1@sha256:87999aa3d42bdc6bea60565083ee17e86d1f3339802f543c0d03998580f9cb89
+2026-Jun-14 22:21:08.599324 #3 resolve docker.io/docker/dockerfile:1@sha256:87999aa3d42bdc6bea60565083ee17e86d1f3339802f543c0d03998580f9cb89 0.0s done
+2026-Jun-14 22:21:08.599324 #3 CACHED
+2026-Jun-14 22:21:08.599324 
+2026-Jun-14 22:21:08.599324 #4 [internal] load metadata for docker.io/library/node:22-alpine
+2026-Jun-14 22:21:08.599324 #4 DONE 0.6s
+2026-Jun-14 22:21:08.599324 
+2026-Jun-14 22:21:08.599324 #5 [internal] load .dockerignore
+2026-Jun-14 22:21:08.599324 #5 transferring context: 134B done
+2026-Jun-14 22:21:08.599324 #5 DONE 0.0s
+2026-Jun-14 22:21:08.599324 
+2026-Jun-14 22:21:08.599324 #6 [base 1/2] FROM docker.io/library/node:22-alpine@sha256:9385cd9f3001dfc3431e8ead12c43e9e1f87cc1b9b5c6cfd0f73865d405b27c4
+2026-Jun-14 22:21:08.599324 #6 resolve docker.io/library/node:22-alpine@sha256:9385cd9f3001dfc3431e8ead12c43e9e1f87cc1b9b5c6cfd0f73865d405b27c4 0.1s done
+2026-Jun-14 22:21:08.599324 #6 DONE 0.1s
+2026-Jun-14 22:21:08.599324 
+2026-Jun-14 22:21:08.599324 #7 [base 2/2] WORKDIR /app
+2026-Jun-14 22:21:08.599324 #7 CACHED
+2026-Jun-14 22:21:08.599324 
+2026-Jun-14 22:21:08.599324 #8 [runner 1/4] RUN addgroup --system --gid 1001 nodejs   && adduser --system --uid 1001 nextjs
+2026-Jun-14 22:21:08.599324 #8 DONE 0.4s
+2026-Jun-14 22:21:08.599324 
+2026-Jun-14 22:21:08.599324 #9 [internal] load build context
+2026-Jun-14 22:21:08.599324 #9 transferring context: 7.12MB 0.5s done
+2026-Jun-14 22:21:08.599324 #9 DONE 0.6s
+2026-Jun-14 22:21:08.599324 
+2026-Jun-14 22:21:08.599324 #10 [deps 1/2] COPY package.json package-lock.json ./
+2026-Jun-14 22:21:08.599324 #10 DONE 0.1s
+2026-Jun-14 22:21:08.599324 
+2026-Jun-14 22:21:08.599324 #11 [deps 2/2] RUN npm ci
+2026-Jun-14 22:21:08.599324 #11 3.395 npm error code EUSAGE
+2026-Jun-14 22:21:08.599324 #11 3.395 npm error
+2026-Jun-14 22:21:08.599324 #11 3.395 npm error `npm ci` can only install packages when your package.json and package-lock.json or npm-shrinkwrap.json are in sync. Please update your lock file with `npm install` before continuing.
+2026-Jun-14 22:21:08.599324 #11 3.395 npm error
+2026-Jun-14 22:21:08.599324 #11 3.395 npm error Missing: @emnapi/runtime@1.11.1 from lock file
+2026-Jun-14 22:21:08.599324 #11 3.395 npm error Missing: @emnapi/core@1.11.1 from lock file
+2026-Jun-14 22:21:08.599324 #11 3.395 npm error Invalid: lock file's @emnapi/wasi-threads@1.2.1 does not satisfy @emnapi/wasi-threads@1.2.2
+2026-Jun-14 22:21:08.599324 #11 3.395 npm error Missing: @emnapi/core@1.10.0 from lock file
+2026-Jun-14 22:21:08.599324 #11 3.395 npm error Missing: @emnapi/runtime@1.10.0 from lock file
+2026-Jun-14 22:21:08.599324 #11 3.395 npm error Missing: @emnapi/core@1.10.0 from lock file
+2026-Jun-14 22:21:08.599324 #11 3.395 npm error Missing: @emnapi/runtime@1.10.0 from lock file
+2026-Jun-14 22:21:08.599324 #11 3.395 npm error Missing: @emnapi/wasi-threads@1.2.1 from lock file
+2026-Jun-14 22:21:08.599324 #11 3.395 npm error Missing: @emnapi/wasi-threads@1.2.1 from lock file
+2026-Jun-14 22:21:08.599324 #11 3.395 npm error
+2026-Jun-14 22:21:08.599324 #11 3.395 npm error Clean install a project
+2026-Jun-14 22:21:08.599324 #11 3.395 npm error
+2026-Jun-14 22:21:08.599324 #11 3.395 npm error Usage:
+2026-Jun-14 22:21:08.599324 #11 3.395 npm error npm ci
+2026-Jun-14 22:21:08.599324 #11 3.395 npm error
+2026-Jun-14 22:21:08.599324 #11 3.395 npm error Options:
+2026-Jun-14 22:21:08.599324 #11 3.395 npm error [--install-strategy <hoisted|nested|shallow|linked>] [--legacy-bundling]
+2026-Jun-14 22:21:08.599324 #11 3.395 npm error [--global-style] [--omit <dev|optional|peer> [--omit <dev|optional|peer> ...]]
+2026-Jun-14 22:21:08.599324 #11 3.395 npm error [--include <prod|dev|optional|peer> [--include <prod|dev|optional|peer> ...]]
+2026-Jun-14 22:21:08.599324 #11 3.395 npm error [--strict-peer-deps] [--foreground-scripts] [--ignore-scripts] [--no-audit]
+2026-Jun-14 22:21:08.599324 #11 3.395 npm error [--no-bin-links] [--no-fund] [--dry-run]
+2026-Jun-14 22:21:08.599324 #11 3.395 npm error [-w|--workspace <workspace-name> [-w|--workspace <workspace-name> ...]]
+2026-Jun-14 22:21:08.599324 #11 3.395 npm error [-ws|--workspaces] [--include-workspace-root] [--install-links]
+2026-Jun-14 22:21:08.599324 #11 3.395 npm error
+2026-Jun-14 22:21:08.599324 #11 3.395 npm error aliases: clean-install, ic, install-clean, isntall-clean
+2026-Jun-14 22:21:08.599324 #11 3.395 npm error
+2026-Jun-14 22:21:08.599324 #11 3.395 npm error Run "npm help ci" for more info
+2026-Jun-14 22:21:08.599324 #11 3.399 npm notice
+2026-Jun-14 22:21:08.599324 #11 3.399 npm notice New major version of npm available! 10.9.8 -> 11.17.0
+2026-Jun-14 22:21:08.599324 #11 3.399 npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.17.0
+2026-Jun-14 22:<REDACTED>@11.17.0
+2026-Jun-14 22:21:08.599324 #11 3.399 npm notice
+2026-Jun-14 22:21:08.599324 #11 3.400 npm error A complete log of this run can be found in: /root/.npm/_logs/2026-06-14T22_21_05_567Z-debug-0.log
+2026-Jun-14 22:21:08.599324 #11 ERROR: process "/bin/sh -c npm ci" did not complete successfully: exit code: 1
+2026-Jun-14 22:21:08.599324 ------
+2026-Jun-14 22:21:08.599324 > [deps 2/2] RUN npm ci:
+2026-Jun-14 22:21:08.599324 3.395 npm error
+2026-Jun-14 22:21:08.599324 3.395 npm error aliases: clean-install, ic, install-clean, isntall-clean
+2026-Jun-14 22:21:08.599324 3.395 npm error
+2026-Jun-14 22:21:08.599324 3.395 npm error Run "npm help ci" for more info
+2026-Jun-14 22:21:08.599324 3.399 npm notice
+2026-Jun-14 22:21:08.599324 3.399 npm notice New major version of npm available! 10.9.8 -> 11.17.0
+2026-Jun-14 22:21:08.599324 3.399 npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.17.0
+2026-Jun-14 22:<REDACTED>@11.17.0
+2026-Jun-14 22:21:08.599324 3.399 npm notice
+2026-Jun-14 22:21:08.599324 3.400 npm error A complete log of this run can be found in: /root/.npm/_logs/2026-06-14T22_21_05_567Z-debug-0.log
+2026-Jun-14 22:21:08.599324 ------
+2026-Jun-14 22:21:08.599324 Dockerfile:17
+2026-Jun-14 22:21:08.599324 --------------------
+2026-Jun-14 22:21:08.599324 15 |     ARG COOLIFY_RESOURCE_UUID=blkxd5d9qxycgil459hqesd3
+2026-Jun-14 22:21:08.599324 16 |     COPY package.json package-lock.json ./
+2026-Jun-14 22:21:08.599324 17 | >>> RUN npm ci
+2026-Jun-14 22:21:08.599324 18 |
+2026-Jun-14 22:21:08.599324 19 |     # 2. Build da aplicação
+2026-Jun-14 22:21:08.599324 --------------------
+2026-Jun-14 22:21:08.599324 ERROR: failed to build: failed to solve: process "/bin/sh -c npm ci" did not complete successfully: exit code: 1
+2026-Jun-14 22:21:08.599324 exit status 1
+2026-Jun-14 22:21:08.610879 [DEBUG] Error type: App\Exceptions\DeploymentException
+2026-Jun-14 22:21:08.623175 [DEBUG] Error code: 0
+2026-Jun-14 22:21:08.635452 [DEBUG] Location: /var/www/html/app/Traits/ExecuteRemoteCommand.php:242
+2026-Jun-14 22:21:08.647900 [DEBUG] Stack trace (first 5 lines):
+2026-Jun-14 22:21:08.664301 [DEBUG] #0 /var/www/html/app/Traits/ExecuteRemoteCommand.php(106): App\Jobs\ApplicationDeploymentJob->executeCommandWithProcess()
+2026-Jun-14 22:21:08.686455 [DEBUG] #1 /var/www/html/vendor/laravel/framework/src/Illuminate/Collections/Traits/EnumeratesValues.php(275): App\Jobs\ApplicationDeploymentJob->{closure:App\Traits\ExecuteRemoteCommand::execute_remote_command():72}()
+2026-Jun-14 22:21:08.711367 [DEBUG] #2 /var/www/html/app/Traits/ExecuteRemoteCommand.php(72): Illuminate\Support\Collection->each()
+2026-Jun-14 22:21:08.734094 [DEBUG] #3 /var/www/html/app/Jobs/ApplicationDeploymentJob.php(3821): App\Jobs\ApplicationDeploymentJob->execute_remote_command()
+2026-Jun-14 22:21:08.759310 [DEBUG] #4 /var/www/html/app/Jobs/ApplicationDeploymentJob.php(912): App\Jobs\ApplicationDeploymentJob->build_image()
+2026-Jun-14 22:21:08.777057 ========================================
+2026-Jun-14 22:21:08.793348 Deployment failed. Removing the new version of your application.
+2026-Jun-14 22:21:09.565837 Gracefully shutting down build container: p112358uqzab3bqth51pvrr6
+2026-Jun-14 22:21:09.812999 [DEBUG] [CMD]: docker stop --time=30 p112358uqzab3bqth51pvrr6
+2026-Jun-14 22:21:09.812999 [DEBUG] Flag --time has been deprecated, use --timeout instead
+2026-Jun-14 22:21:10.057069 [DEBUG] p112358uqzab3bqth51pvrr6

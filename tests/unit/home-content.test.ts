@@ -27,7 +27,7 @@ describe("home-content services data", () => {
   it("should have valid icon references for all services", () => {
     const validIcons = [
       "Monitor", "LayoutDashboard", "Code2", "ServerCog",
-      "Workflow", "Bot", "MessageCircle", "SearchCheck", "Rocket",
+      "Workflow", "Bot", "MessageCircle", "SearchCheck", "Cloud",
     ];
     for (const service of homePageContent.services.items) {
       expect(validIcons).toContain(service.icon);
@@ -41,17 +41,19 @@ describe("home-content structure", () => {
   });
 
   it("should have a hero section with all required fields", () => {
+    expect(homePageContent.hero.eyebrow).toBeTruthy();
     expect(homePageContent.hero.title).toBeTruthy();
     expect(homePageContent.hero.body).toBeTruthy();
     expect(homePageContent.hero.ctas).toHaveLength(2);
-    expect(homePageContent.hero.metrics).toHaveLength(3);
   });
 
   it("should have process steps", () => {
     expect(homePageContent.process.steps).toHaveLength(4);
   });
 
-  it("should have testimonials", () => {
-    expect(homePageContent.testimonials.items.length).toBeGreaterThanOrEqual(1);
+  it("should have about section content", () => {
+    expect(homePageContent.about.eyebrow).toBe("QUEM SOMOS");
+    expect(homePageContent.about.title).toBeTruthy();
+    expect(homePageContent.about.flowChips).toHaveLength(3);
   });
 });

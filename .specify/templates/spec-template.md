@@ -95,11 +95,15 @@
 - **FR-SEO**: Pages affected by this feature MUST define unique metadata, semantic headings,
   crawlable content, internal links, and sitemap/robots behavior when indexable.
 - **FR-SEC**: Inputs, route params, forms, Server Actions, and Route Handlers affected by this
-  feature MUST be validated with Zod or equivalent and follow OWASP guidance.
+  feature MUST be validated with Zod or equivalent and follow OWASP guidance. Features
+  touching auth, upload, redirect, or sensitive data MUST name the OWASP vector mitigated.
 - **FR-UI**: UI affected by this feature MUST follow `docs/designer-system.md`, reuse existing
   shared components when possible, and place route-only components beside the route page.
 - **FR-PERF**: Feature implementation MUST preserve or improve Core Web Vitals and justify any
   client-only JavaScript, dynamic rendering, uncached request, or large dependency.
+- **FR-CODE**: All new code MUST follow Clean Code principles — descriptive names, single-
+  responsibility functions (≤20 lines effective logic), no magic numbers or dead code, DRY
+  enforced (3rd repetition triggers extraction), explicit typed error handling.
 
 *Example of marking unclear requirements:*
 

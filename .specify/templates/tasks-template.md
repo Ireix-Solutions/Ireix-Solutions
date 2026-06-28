@@ -54,7 +54,8 @@ description: "Task list template for feature implementation"
 - [ ] T002 Initialize [language] project with [framework] dependencies
 - [ ] T003 [P] Configure linting and formatting tools
 - [ ] T004 [P] Review `docs/designer-system.md` and relevant `node_modules/next/dist/docs/` guides
-- [ ] T005 [P] Inventory reusable components in `components/` and route-local components
+- [ ] T005 [P] **MANDATORY reuse inventory**: list existing components in `components/` and
+  route-local `app/**/_components/`; document which will be reused and justify any new creation
 
 ---
 
@@ -266,6 +267,9 @@ With multiple developers:
 - Verify tests fail before implementing
 - Commit after each task or logical group
 - Stop at any checkpoint to validate story independently
-- Follow OWASP, SOLID, Next.js App Router docs, and `docs/designer-system.md`
-- Keep endpoints thin: validate, delegate to services/entities, return consistent responses
+- Follow OWASP Top 10, SOLID, Clean Code, Next.js App Router docs, and `docs/designer-system.md`
+- Keep endpoints thin: validate with Zod, delegate to services/entities, return consistent responses
+- Clean Code: descriptive names, single-responsibility functions ≤20 lines, no dead code or
+  magic numbers, DRY enforced (3rd repetition = extract), typed error handling always explicit
+- Component reuse: inventory existing components before creating any new one; document decision
 - Avoid: vague tasks, same file conflicts, cross-story dependencies that break independence

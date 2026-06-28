@@ -1,6 +1,6 @@
 "use client";
 
-import { useActionState } from "react";
+import { useActionState, useState } from "react";
 
 import { submitProposalAction } from "@/app/actions/proposal";
 import {
@@ -24,21 +24,22 @@ export function ContactForm() {
         : "text-[var(--irex-muted)]";
 
   return (
-    <div className="rounded-3xl border border-[var(--irex-border)] bg-white p-7 shadow-[0_1px_4px_rgba(20,22,26,0.2)]">
-      <h3 className="text-2xl font-bold text-[var(--irex-ink)]">
+    <div className="rounded-[28px] border border-[var(--irex-border)] bg-white p-7 shadow-[0_12px_34px_-24px_rgba(6,16,20,0.12)]">
+      <h3 className="text-[15px] font-bold text-[var(--irex-ink)]">
         {contact.formTitle}
       </h3>
 
       <form
         key={formKey}
         action={formAction}
-        className="mt-4 space-y-3.5"
+        className="mt-3.5 space-y-3.5"
         noValidate
       >
         <div className="grid gap-3 sm:grid-cols-2">
           <Field
             label="Nome"
             name="name"
+            placeholder="Seu nome"
             defaultValue={state.values.name}
             error={state.fieldErrors?.name?.[0]}
           />
@@ -46,14 +47,14 @@ export function ContactForm() {
             label="E-mail"
             name="email"
             type="email"
+            placeholder="voce@email.com"
             defaultValue={state.values.email}
             error={state.fieldErrors?.email?.[0]}
           />
         </div>
 
-        <Field
-          label="Telefone / WhatsApp"
-          name="phone"
+        <PhoneField
+          placeholder="(00) 00000-0000"
           defaultValue={state.values.phone}
           error={state.fieldErrors?.phone?.[0]}
         />
@@ -93,6 +94,7 @@ export function ContactForm() {
           <textarea
             id="message"
             name="message"
+            placeholder="Conte um pouco sobre seu projeto..."
             defaultValue={state.values.message}
             rows={5}
             className={`irex-input min-h-[120px] resize-y py-3 ${state.fieldErrors?.message ? "irex-input--error" : ""}`}
@@ -109,7 +111,7 @@ export function ContactForm() {
         </div>
 
         <div className="flex flex-col gap-3 pt-1 sm:flex-row sm:items-center sm:justify-between">
-          <p className="text-base leading-7 text-[var(--irex-muted)]">
+          <p className="text-[13px] leading-[1.45] text-[#64747C]">
             {contact.formNote}
           </p>
           <button
@@ -129,11 +131,64 @@ export function ContactForm() {
   );
 }
 
+function formatPhone(value: string): string {
+  const digits = value.replace(/\D/g, "").slice(0, 11);
+
+  if (digits.length === 0) return "";
+  if (digits.length <= 2) return `(${digits}`;
+  if (digits.length <= 6) return `(${digits.slice(0, 2)}) ${digits.slice(2)}`;
+  if (digits.length <= 10) {
+    return `(${digits.slice(0, 2)}) ${digits.slice(2, 6)}-${digits.slice(6)}`;
+  }
+
+  return `(${digits.slice(0, 2)}) ${digits.slice(2, 7)}-${digits.slice(7)}`;
+}
+
+function PhoneField({
+  defaultValue,
+  error,
+  placeholder,
+}: {
+  defaultValue: string;
+  error?: string;
+  placeholder?: string;
+}) {
+  const [value, setValue] = useState(() => formatPhone(defaultValue));
+  const errorId = "phone-error";
+
+  return (
+    <div className="space-y-1.5">
+      <label htmlFor="phone" className="irex-form-label">
+        Telefone / WhatsApp
+      </label>
+      <input
+        id="phone"
+        name="phone"
+        type="tel"
+        inputMode="numeric"
+        autoComplete="tel"
+        placeholder={placeholder}
+        value={value}
+        onChange={(event) => setValue(formatPhone(event.target.value))}
+        className={`irex-input ${error ? "irex-input--error" : ""}`}
+        aria-invalid={Boolean(error)}
+        aria-describedby={error ? errorId : undefined}
+      />
+      {error ? (
+        <p id={errorId} className="irex-field-error">
+          {error}
+        </p>
+      ) : null}
+    </div>
+  );
+}
+
 type FieldProps = {
   defaultValue: string;
   error?: string;
   label: string;
   name: "name" | "email" | "phone";
+  placeholder?: string;
   type?: "email" | "text";
 };
 
@@ -142,6 +197,7 @@ function Field({
   error,
   label,
   name,
+  placeholder,
   type = "text",
 }: FieldProps) {
   const errorId = `${name}-error`;
@@ -155,6 +211,7 @@ function Field({
         id={name}
         name={name}
         type={type}
+        placeholder={placeholder}
         defaultValue={defaultValue}
         className={`irex-input ${error ? "irex-input--error" : ""}`}
         aria-invalid={Boolean(error)}

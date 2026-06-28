@@ -1,34 +1,32 @@
 "use client";
 
+import Image from "next/image";
 import Link from "next/link";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion, useScroll, useMotionValueEvent } from "framer-motion";
 
-import {
-  hasConfiguredWhatsApp,
-  homePageContent,
-} from "./home-content";
+import { homePageContent } from "./home-content";
 
 export function TopNavigation() {
   const [isOpen, setIsOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
   const { navigation } = homePageContent;
   const { scrollY } = useScroll();
-  const headerBg = useTransform(
-    scrollY,
-    [0, 80],
-    ["rgba(255,255,255,0.9)", "rgba(255,255,255,0.98)"],
-  );
-  const headerShadow = useTransform(
-    scrollY,
-    [0, 80],
-    ["0 0 0 rgba(0,0,0,0)", "0 2px 12px rgba(0,0,0,0.06)"],
-  );
+
+  useMotionValueEvent(scrollY, "change", (latest) => {
+    setScrolled(latest > 60);
+  });
+
+  const isSolid = scrolled || isOpen;
 
   return (
-    <motion.header
-      className="sticky top-0 z-50 border-b border-[var(--irex-border)] backdrop-blur"
-      style={{ backgroundColor: headerBg, boxShadow: headerShadow }}
+    <header
+      className={`fixed left-0 right-0 top-0 z-50 transition-colors duration-300 ${
+        isSolid
+          ? "bg-[#061014] shadow-[0_2px_20px_rgba(0,0,0,0.25)]"
+          : "bg-transparent"
+      }`}
     >
       <div className="irex-container flex min-h-[76px] items-center justify-between gap-6 py-4">
         <Link
@@ -36,28 +34,29 @@ export function TopNavigation() {
           className="flex items-center gap-3"
           aria-label={navigation.brandName}
         >
-          <span className="flex h-9 w-[54px] items-center justify-center rounded-[10px] bg-[var(--irex-ink)] text-sm font-bold text-white">
-            IR
-          </span>
-          <span className="flex flex-col">
-            <span className="text-lg font-bold text-[var(--irex-ink)]">
-              {navigation.brandName}
-            </span>
-            <span className="text-[11px] text-[var(--irex-muted)]">
-              {navigation.brandTagline}
-            </span>
+          <Image
+            src="/images/ireix-logo.png"
+            alt={navigation.brandName}
+            width={38}
+            height={38}
+            className="h-[38px] w-[38px] rounded-[10px] object-cover"
+          />
+          <span className="text-[17px] font-bold leading-tight text-white">
+            {navigation.brandName}
           </span>
         </Link>
 
         <nav
           aria-label="Navegação principal"
-          className="hidden items-center gap-6 lg:flex"
+          className="hidden items-center gap-7 lg:flex"
         >
-          {navigation.links.map((link) => (
+          {navigation.links.map((link, index) => (
             <a
               key={link.label}
               href={link.href}
-              className="text-sm font-bold text-[var(--irex-text-soft)] transition-colors hover:text-[var(--irex-ink)]"
+              className={`text-[12px] font-bold transition-colors hover:text-white ${
+                index === 0 ? "text-white" : "text-[#D3E0E5]"
+              }`}
             >
               {link.label}
             </a>
@@ -67,7 +66,7 @@ export function TopNavigation() {
         <div className="hidden items-center gap-6 lg:flex">
           <motion.a
             href={navigation.primaryCta.href}
-            className="irex-button irex-button--whatsapp"
+            className="irex-button irex-button--primary text-[12px] shadow-[0_8px_20px_-4px_rgba(67,163,190,0.2)]"
             whileHover={{ scale: 1.03 }}
             whileTap={{ scale: 0.97 }}
           >
@@ -75,7 +74,7 @@ export function TopNavigation() {
           </motion.a>
           <a
             href={navigation.secondaryCta.href}
-            className="text-sm font-semibold text-[var(--irex-text-subtle)] transition-colors hover:text-[var(--irex-ink)]"
+            className="text-[12px] font-bold text-white/80 transition-colors hover:text-white"
           >
             {navigation.secondaryCta.label}
           </a>
@@ -83,7 +82,7 @@ export function TopNavigation() {
 
         <button
           type="button"
-          className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-[var(--irex-border)] text-[var(--irex-ink)] lg:hidden"
+          className="inline-flex h-11 w-11 items-center justify-center rounded-full border border-white/30 text-white lg:hidden"
           aria-expanded={isOpen}
           aria-controls="mobile-navigation"
           aria-label={isOpen ? "Fechar menu" : "Abrir menu"}
@@ -96,7 +95,7 @@ export function TopNavigation() {
       {isOpen ? (
         <motion.div
           id="mobile-navigation"
-          className="border-t border-[var(--irex-border)] bg-white lg:hidden"
+          className="border-t border-white/15 bg-[#061014]/95 backdrop-blur-sm lg:hidden"
           initial={{ opacity: 0, height: 0 }}
           animate={{ opacity: 1, height: "auto" }}
           exit={{ opacity: 0, height: 0 }}
@@ -107,7 +106,7 @@ export function TopNavigation() {
               <a
                 key={link.label}
                 href={link.href}
-                className="text-base font-semibold text-[var(--irex-ink)]"
+                className="text-base font-semibold text-white"
                 onClick={() => setIsOpen(false)}
               >
                 {link.label}
@@ -115,26 +114,21 @@ export function TopNavigation() {
             ))}
             <a
               href={navigation.primaryCta.href}
-              className="irex-button irex-button--whatsapp w-full justify-center"
+              className="irex-button irex-button--primary w-full justify-center"
               onClick={() => setIsOpen(false)}
             >
               {navigation.primaryCta.label}
             </a>
             <a
               href={navigation.secondaryCta.href}
-              className="irex-button irex-button--secondary w-full justify-center"
+              className="irex-button irex-button--dark-secondary w-full justify-center"
               onClick={() => setIsOpen(false)}
             >
               {navigation.secondaryCta.label}
             </a>
-            {!hasConfiguredWhatsApp ? (
-              <p className="text-sm text-[var(--irex-muted)]">
-                WhatsApp em configuração. O botão leva direto para contato.
-              </p>
-            ) : null}
           </div>
         </motion.div>
       ) : null}
-    </motion.header>
+    </header>
   );
 }

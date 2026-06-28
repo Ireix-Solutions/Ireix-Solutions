@@ -27,7 +27,6 @@ export function StaggerContainer({
   const ref = useRef<HTMLDivElement>(null);
   const isInView = useInView(ref, { once: true, amount });
   const accessibleContainer = useAccessibleVariants(staggerContainerVariants);
-  const accessibleItem = useAccessibleVariants(staggerItemVariants);
 
   return (
     <motion.div

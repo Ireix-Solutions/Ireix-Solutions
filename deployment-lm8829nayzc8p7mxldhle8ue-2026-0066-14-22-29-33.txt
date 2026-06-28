@@ -1,0 +1,130 @@
+2026-Jun-14 22:26:37.543612 Docker 29.4.2 with BuildKit and Buildx detected on deployment server (localhost).
+2026-Jun-14 22:26:37.559099 Starting deployment of Ireix-Solutions/Ireix-Solutions:main to localhost.
+2026-Jun-14 22:26:38.103409 Preparing container with helper image: ghcr.io/coollabsio/coolify-helper:1.0.14
+2026-Jun-14 22:26:41.342378 ----------------------------------------
+2026-Jun-14 22:26:41.366534 Importing Ireix-Solutions/Ireix-Solutions:main (commit sha 8018e05e4e80fa003174af23140d028c88e11592) to /artifacts/lm8829nayzc8p7mxldhle8ue.
+2026-Jun-14 22:26:44.182806 Image not found (blkxd5d9qxycgil459hqesd3:8018e05e4e80fa003174af23140d028c88e11592). Building new image.
+2026-Jun-14 22:26:47.141608 ----------------------------------------
+2026-Jun-14 22:26:47.153837 Building docker image started.
+2026-Jun-14 22:26:47.167510 To check the current progress, click on Show Debug Logs.
+2026-Jun-14 22:29:22.025397 ========================================
+2026-Jun-14 22:29:22.051367 Deployment failed: Command execution failed (exit code 255): docker exec lm8829nayzc8p7mxldhle8ue bash -c 'bash /artifacts/build.sh'
+2026-Jun-14 22:29:22.051367 Error: #0 building with "default" instance using docker driver
+2026-Jun-14 22:29:22.051367
+2026-Jun-14 22:29:22.051367 #1 [internal] load build definition from Dockerfile
+2026-Jun-14 22:29:22.051367 #1 transferring dockerfile: 1.74kB done
+2026-Jun-14 22:29:22.051367 #1 DONE 0.0s
+2026-Jun-14 22:29:22.051367
+2026-Jun-14 22:29:22.051367 #2 resolve image config for docker-image://docker.io/docker/dockerfile:1
+2026-Jun-14 22:29:22.051367 #2 DONE 0.6s
+2026-Jun-14 22:29:22.051367
+2026-Jun-14 22:29:22.051367 #3 docker-image://docker.io/docker/dockerfile:1@sha256:87999aa3d42bdc6bea60565083ee17e86d1f3339802f543c0d03998580f9cb89
+2026-Jun-14 22:29:22.051367 #3 resolve docker.io/docker/dockerfile:1@sha256:87999aa3d42bdc6bea60565083ee17e86d1f3339802f543c0d03998580f9cb89 0.0s done
+2026-Jun-14 22:29:22.051367 #3 CACHED
+2026-Jun-14 22:29:22.051367
+2026-Jun-14 22:29:22.051367 #4 [internal] load metadata for docker.io/library/node:22-alpine
+2026-Jun-14 22:29:22.051367 #4 DONE 0.5s
+2026-Jun-14 22:29:22.051367
+2026-Jun-14 22:29:22.051367 #5 [internal] load .dockerignore
+2026-Jun-14 22:29:22.051367 #5 transferring context: 134B done
+2026-Jun-14 22:29:22.051367 #5 DONE 0.1s
+2026-Jun-14 22:29:22.051367
+2026-Jun-14 22:29:22.051367 #6 [base 1/2] FROM docker.io/library/node:22-alpine@sha256:9385cd9f3001dfc3431e8ead12c43e9e1f87cc1b9b5c6cfd0f73865d405b27c4
+2026-Jun-14 22:29:22.051367 #6 resolve docker.io/library/node:22-alpine@sha256:9385cd9f3001dfc3431e8ead12c43e9e1f87cc1b9b5c6cfd0f73865d405b27c4 0.0s done
+2026-Jun-14 22:29:22.051367 #6 DONE 0.0s
+2026-Jun-14 22:29:22.051367
+2026-Jun-14 22:29:22.051367 #7 [base 2/2] WORKDIR /app
+2026-Jun-14 22:29:22.051367 #7 CACHED
+2026-Jun-14 22:29:22.051367
+2026-Jun-14 22:29:22.051367 #8 [runner 1/4] RUN addgroup --system --gid 1001 nodejs && adduser --system --uid 1001 nextjs
+2026-Jun-14 22:29:22.051367 #8 CACHED
+2026-Jun-14 22:29:22.051367
+2026-Jun-14 22:29:22.051367 #9 [internal] load build context
+2026-Jun-14 22:29:22.051367 #9 transferring context: 7.12MB 0.2s done
+2026-Jun-14 22:29:22.051367 #9 DONE 0.2s
+2026-Jun-14 22:29:22.051367
+2026-Jun-14 22:29:22.051367 #10 [deps 1/2] COPY package.json package-lock.json ./
+2026-Jun-14 22:29:22.051367 #10 DONE 0.1s
+2026-Jun-14 22:29:22.051367
+2026-Jun-14 22:29:22.051367 #11 [deps 2/2] RUN npm ci
+2026-Jun-14 22:29:22.051367 #11 42.30
+2026-Jun-14 22:29:22.051367 #11 42.30 added 460 packages, and audited 461 packages in 42s
+2026-Jun-14 22:29:22.051367 #11 42.30
+2026-Jun-14 22:29:22.051367 #11 42.30 167 packages are looking for funding
+2026-Jun-14 22:29:22.051367 #11 42.30 run `npm fund` for details
+2026-Jun-14 22:29:22.051367 #11 42.42
+2026-Jun-14 22:29:22.051367 #11 42.42 2 moderate severity vulnerabilities
+2026-Jun-14 22:29:22.051367 #11 42.42
+2026-Jun-14 22:29:22.051367 #11 42.42 To address all issues (including breaking changes), run:
+2026-Jun-14 22:29:22.051367 #11 42.42 npm audit fix --force
+2026-Jun-14 22:29:22.051367 #11 42.42
+2026-Jun-14 22:29:22.051367 #11 42.42 Run `npm audit` for details.
+2026-Jun-14 22:29:22.051367 #11 42.43 npm notice
+2026-Jun-14 22:29:22.051367 #11 42.43 npm notice New major version of npm available! 10.9.8 -> 11.17.0
+2026-Jun-14 22:29:22.051367 #11 42.43 npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.17.0
+2026-Jun-14 22:29:22.051367 #11 42.43 npm notice To update run:<REDACTED>@11.17.0
+2026-Jun-14 22:29:22.051367 #11 42.43 npm notice
+2026-Jun-14 22:29:22.051367 #11 DONE 42.9s
+2026-Jun-14 22:29:22.051367
+2026-Jun-14 22:29:22.051367 #12 [builder 1/3] COPY --from=deps /app/node_modules ./node_modules
+2026-Jun-14 22:29:22.051367 #12 DONE 20.7s
+2026-Jun-14 22:29:22.051367
+2026-Jun-14 22:29:22.051367 #13 [builder 2/3] COPY . .
+2026-Jun-14 22:29:22.051367 #13 DONE 0.6s
+2026-Jun-14 22:29:22.051367
+2026-Jun-14 22:29:22.051367 #14 [builder 3/3] RUN npm run build
+2026-Jun-14 22:29:22.051367 #14 1.807
+2026-Jun-14 22:29:22.051367 #14 1.807 > irex-site@0.1.0 build
+2026-Jun-14 22:29:22.051367 #14 1.807 > next build
+2026-Jun-14 22:29:22.051367 #14 1.807
+2026-Jun-14 22:29:22.051367 #14 3.744 ▲ Next.js 16.2.7 (Turbopack)
+2026-Jun-14 22:29:22.051367 #14 3.747
+2026-Jun-14 22:29:22.051367 #14 3.953 Creating an optimized production build ...
+2026-Jun-14 22:29:22.051367 #14 30.00 ✓ Compiled successfully in 25.3s
+2026-Jun-14 22:29:22.051367 #14 30.01 Running TypeScript ...
+2026-Jun-14 22:29:22.051367 #14 48.55 Finished TypeScript in 18.5s ...
+2026-Jun-14 22:29:22.051367 #14 48.56 Collecting page data using 1 worker ...
+2026-Jun-14 22:29:22.051367 #14 50.43 Generating static pages using 1 worker (0/8) ...
+2026-Jun-14 22:29:22.051367 #14 51.26 Generating static pages using 1 worker (2/8)
+2026-Jun-14 22:29:22.051367 #14 51.28 Generating static pages using 1 worker (4/8)
+2026-Jun-14 22:29:22.051367 #14 51.28 Generating static pages using 1 worker (6/8)
+2026-Jun-14 22:29:22.051367 #14 51.28 ✓ Generating static pages using 1 worker (8/8) in 853ms
+2026-Jun-14 22:29:22.051367 #14 51.31 Finalizing page optimization ...
+2026-Jun-14 22:29:22.051367 #14 52.04
+2026-Jun-14 22:29:22.051367 #14 52.06 Route (app)
+2026-Jun-14 22:29:22.051367 #14 52.06 ┌ ○ /
+2026-Jun-14 22:29:22.051367 #14 52.06 ├ ○ /_not-found
+2026-Jun-14 22:29:22.051367 #14 52.06 ├ ○ /blog
+2026-Jun-14 22:29:22.051367 #14 52.06 ├ ○ /opengraph-image.png
+2026-Jun-14 22:29:22.051367 #14 52.06 ├ ○ /robots.txt
+2026-Jun-14 22:29:22.051367 #14 52.06 └ ○ /sitemap.xml
+2026-Jun-14 22:29:22.051367 #14 52.06
+2026-Jun-14 22:29:22.051367 #14 52.06
+2026-Jun-14 22:29:22.051367 #14 52.06 ○ (Static) prerendered as static content
+2026-Jun-14 22:29:22.051367 #14 52.06
+2026-Jun-14 22:29:22.051367 #14 52.18 npm notice
+2026-Jun-14 22:29:22.051367 #14 52.18 npm notice New major version of npm available! 10.9.8 -> 11.17.0
+2026-Jun-14 22:29:22.051367 #14 52.18 npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.17.0
+2026-Jun-14 22:29:22.051367 #14 52.18 npm notice To update run:<REDACTED>@11.17.0
+2026-Jun-14 22:29:22.051367 #14 52.18 npm notice
+2026-Jun-14 22:29:22.051367 #14 DONE 52.4s
+2026-Jun-14 22:29:22.051367
+2026-Jun-14 22:29:22.051367 #15 [runner 2/4] COPY --from=builder /app/public ./public
+2026-Jun-14 22:29:22.051367 #15 DONE 0.2s
+2026-Jun-14 22:29:22.051367
+2026-Jun-14 22:29:22.051367 #16 [runner 3/4] COPY --from=builder --chown=nextjs:nodejs /app/.next/standalone ./
+2026-Jun-14 22:29:22.051367 #16 DONE 0.5s
+2026-Jun-14 22:29:22.051367
+2026-Jun-14 22:29:22.051367 #17 [runner 4/4] COPY --from=builder --chown=nextjs:nodejs /app/.next/static ./.next/static
+2026-Jun-14 22:29:22.051367 #17 DONE 0.1s
+2026-Jun-14 22:29:22.051367
+2026-Jun-14 22:29:22.051367 #18 exporting to image
+2026-Jun-14 22:29:22.051367 #18 exporting layers
+2026-Jun-14 22:29:22.051367 #18 exporting layers 5.4s done
+2026-Jun-14 22:29:22.051367 #18 exporting manifest sha256:7c25e46a8982a3efbfbd043507488856d2d6dbc908fc9f624ac21986c4421352 0.0s done
+2026-Jun-14 22:29:22.051367 #18 exporting config sha256:adb58792978468650ddd6bd9ae2ffcb4be3713743059310ab915fa0622dd8264 0.0s done
+2026-Jun-14 22:29:22.051367 #18 exporting attestation manifest sha256:74bbd0e308e3e2d249d7b87939726379a9858ddbac8086f0a20ed028b1d3d20c 0.0s done
+2026-Jun-14 22:29:22.051367 #18 exporting manifest list sha256:33093a7c761894973d70412bf1cd16e78488e18440f6f679ef01ca3629a9707e 0.0s done
+2026-Jun-14 22:29:22.051367 #18 naming to docker.io/library/blkxd5d9qxycgil459hqesd3:8018e05e4e80fa003174af23140d028c88e11592 done
+2026-Jun-14 22:29:22.378502 ========================================
+2026-Jun-14 22:29:22.419765 Deployment failed. Removing the new version of your application.

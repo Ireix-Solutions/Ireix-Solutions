@@ -52,14 +52,20 @@
   consistency and declare SEO/conversion impact.
 - SOLID and componentization: existing components were checked; shared components belong in
   `components/`; route-only components belong in `app/**/components/` or `app/**/_components/`.
+  Reuse decision MUST be documented (confirmed reuse or justified new artefact).
+  Duplication of UI, logic, or styles MUST NOT occur without a Complexity Tracking entry.
 - OWASP security: all affected inputs are validated with Zod or equivalent; secrets remain
-  server-only; endpoints/actions delegate business rules to services/entities.
+  server-only; endpoints/actions delegate business rules to services/entities; mitigated
+  OWASP Top 10 vector is named when touching auth, upload, redirect, or sensitive data.
 - Next.js App Router: relevant `node_modules/next/dist/docs/` guide was consulted; Server
   Components are default; Client Components and dynamic rendering are justified.
 - SEO and performance: metadata, semantic HTML, crawlability, `next/image`, `next/font`,
   `next/link`, caching/rendering, and Core Web Vitals impacts are addressed.
 - Design system and responsive UX: `docs/designer-system.md` was followed; mobile and desktop
   behavior are covered; accessibility and text fit are checked.
+- Clean Code: symbol names are descriptive and reveal intent; functions have single
+  responsibility (≤20 lines of effective logic); no dead code, unused imports, magic numbers,
+  or silenced exceptions; DRY applied (3rd repetition triggers extraction).
 - **TDD obrigatório: RED → GREEN → REFACTOR**: todo código de produção novo exige teste
   escrito primeiro. Nenhuma implementação pode começar sem o teste correspondente na fase
   RED. Cobertura mínima de 80% para código novo. `npm run test` deve passar antes de

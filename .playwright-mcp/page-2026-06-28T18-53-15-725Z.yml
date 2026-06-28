@@ -1,0 +1,313 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e2]:
+    - main [ref=e3]:
+      - generic [ref=e4]:
+        - img [ref=e5]
+        - generic [ref=e8]:
+          - link "Ireix Solution" [ref=e9] [cursor=pointer]:
+            - /url: /
+            - img "Ireix Solution" [ref=e10]
+            - generic [ref=e11]: Ireix Solution
+          - navigation "Navegação principal" [ref=e12]:
+            - link "Início" [ref=e13] [cursor=pointer]:
+              - /url: /
+            - link "Serviços" [ref=e14] [cursor=pointer]:
+              - /url: "#solucoes"
+            - link "Contato" [ref=e15] [cursor=pointer]:
+              - /url: "#contato"
+          - generic [ref=e16]:
+            - link "Solicitar proposta" [ref=e17] [cursor=pointer]:
+              - /url: "#contato"
+            - link "Área do cliente" [ref=e18] [cursor=pointer]:
+              - /url: "#contato"
+        - generic [ref=e20]:
+          - paragraph [ref=e21]: PRESENÇA DIGITAL E CONVERSÃO
+          - heading "Presença digital profissional para sua empresa crescer." [level=1] [ref=e22]
+          - paragraph [ref=e23]: Um site claro, bonito e direto ao ponto para apresentar seu negócio com confiança e transformar visitantes em contatos qualificados.
+          - generic [ref=e24]:
+            - link "Solicitar proposta" [ref=e25] [cursor=pointer]:
+              - /url: "#contato"
+            - link "Conhecer serviços" [ref=e26] [cursor=pointer]:
+              - /url: "#solucoes"
+      - generic [ref=e28]:
+        - generic: IREIX
+        - generic [ref=e30]:
+          - generic [ref=e31]:
+            - paragraph [ref=e32]: QUEM SOMOS
+            - heading "Digital que faz sua empresa parecer tão boa quanto ela é." [level=2] [ref=e33]
+            - paragraph [ref=e34]: A Ireix cria presença digital para empresas que precisam ser entendidas rápido, transmitir confiança e transformar interesse em conversa comercial. Estratégia, design e execução trabalhando juntos para o negócio parecer tão bom online quanto é na prática.
+          - generic [ref=e35]:
+            - generic: IREIX
+            - generic [ref=e36]:
+              - generic [ref=e37]:
+                - img "Ireix" [ref=e38]
+                - generic [ref=e39]: Ireix
+              - generic [ref=e47]:
+                - paragraph [ref=e48]: PRESENÇA DIGITAL
+                - generic [ref=e56]:
+                  - img [ref=e57]
+                  - paragraph [ref=e59]: Contato mais simples
+                  - paragraph [ref=e60]: do interesse até a conversa
+              - generic [ref=e61]:
+                - generic [ref=e62]:
+                  - generic [ref=e63]: "01"
+                  - generic [ref=e64]: Interesse
+                - generic [ref=e65]:
+                  - generic [ref=e66]: "02"
+                  - generic [ref=e67]: Confiança
+                - generic [ref=e68]:
+                  - generic [ref=e69]: "03"
+                  - generic [ref=e70]: Contato
+            - generic [ref=e71]:
+              - paragraph [ref=e72]: + clareza
+              - paragraph [ref=e73]: para decidir, confiar e chamar
+      - generic [ref=e75]:
+        - generic [ref=e76]:
+          - generic [ref=e77]:
+            - paragraph [ref=e78]: SERVIÇOS
+            - heading "Soluções digitais com a mesma presença premium do seu negócio." [level=2] [ref=e79]
+            - paragraph [ref=e80]: "Da primeira impressão ao contato comercial: organizamos site, atendimento e processos para sua empresa vender com mais confiança."
+          - link "Montar meu projeto" [ref=e81] [cursor=pointer]:
+            - /url: "#contato"
+        - generic [ref=e82]:
+          - article [ref=e84]:
+            - img [ref=e86]
+            - heading "Sites que vendem" [level=3] [ref=e88]
+            - paragraph [ref=e89]: Páginas profissionais com mensagem clara, visual forte e caminho direto para o orçamento.
+          - article [ref=e91]:
+            - img [ref=e93]
+            - heading "Sistemas para organizar" [level=3] [ref=e98]
+            - paragraph [ref=e99]: Painéis e portais que tiram processos do improviso e dão mais controle para a equipe.
+          - article [ref=e101]:
+            - img [ref=e103]
+            - heading "Experiências digitais" [level=3] [ref=e107]
+            - paragraph [ref=e108]: Interfaces modernas para apresentar serviços, captar contatos e conduzir o cliente com fluidez.
+          - article [ref=e110]:
+            - img [ref=e112]
+            - heading "Integrações seguras" [level=3] [ref=e123]
+            - paragraph [ref=e124]: Conectamos ferramentas, cadastros, formulários e rotinas para reduzir retrabalho operacional.
+          - article [ref=e126]:
+            - img [ref=e128]
+            - heading "Automação de processos" [level=3] [ref=e132]
+            - paragraph [ref=e133]: Fluxos automáticos para notificações, cobranças, cadastros e acompanhamento comercial.
+          - article [ref=e135]:
+            - img [ref=e137]
+            - heading "Atendimento inteligente" [level=3] [ref=e140]
+            - paragraph [ref=e141]: Assistentes e respostas guiadas para acelerar o primeiro contato sem perder contexto.
+          - article [ref=e143]:
+            - img [ref=e145]
+            - heading "WhatsApp comercial" [level=3] [ref=e147]
+            - paragraph [ref=e148]: Captação de leads, mensagens organizadas e atendimento conectado aos seus canais digitais.
+          - article [ref=e150]:
+            - img [ref=e152]
+            - heading "SEO e performance" [level=3] [ref=e156]
+            - paragraph [ref=e157]: Estrutura para carregar rápido, aparecer melhor e transformar visitas em oportunidades.
+          - article [ref=e159]:
+            - img [ref=e161]
+            - heading "Serviços em nuvem" [level=3] [ref=e163]
+            - paragraph [ref=e164]: Hospedagem, infraestrutura e deploy escaláveis para manter site e sistemas no ar com estabilidade.
+      - generic [ref=e166]:
+        - generic: IREIX
+        - generic [ref=e167]:
+          - paragraph [ref=e168]: PROCESSO
+          - heading "Um processo claro para tirar sua presença digital do papel." [level=2] [ref=e169]
+          - paragraph [ref=e170]: "Você acompanha cada etapa com objetividade: entendemos o negócio, desenhamos a experiência, publicamos e evoluímos com base em resultado."
+          - link "Ver metodologia" [ref=e171] [cursor=pointer]:
+            - /url: "#contato"
+        - generic [ref=e172]:
+          - article [ref=e173]:
+            - generic [ref=e174]: "01"
+            - generic [ref=e175]:
+              - heading "Diagnóstico" [level=3] [ref=e176]
+              - paragraph [ref=e177]: Mapeamos objetivos, gargalos, público, canais e sistemas existentes.
+          - article [ref=e178]:
+            - generic [ref=e179]: "02"
+            - generic [ref=e180]:
+              - heading "Prototipação" [level=3] [ref=e181]
+              - paragraph [ref=e182]: Criamos a experiência visual e o fluxo principal antes de desenvolver.
+          - article [ref=e183]:
+            - generic [ref=e184]: "03"
+            - generic [ref=e185]:
+              - heading "Desenvolvimento" [level=3] [ref=e186]
+              - paragraph [ref=e187]: Construímos com stack moderna, integrações, segurança básica e performance.
+          - article [ref=e188]:
+            - generic [ref=e189]: "04"
+            - generic [ref=e190]:
+              - heading "Evolução" [level=3] [ref=e191]
+              - paragraph [ref=e192]: Acompanhamos métricas, manutenção, melhorias e novas automações.
+      - generic [ref=e195]:
+        - generic [ref=e196]:
+          - paragraph [ref=e197]: ATENDIMENTO COMERCIAL
+          - heading "Respostas mais rápidas para transformar conversas em oportunidades." [level=2] [ref=e198]
+          - paragraph [ref=e199]: Organize seus canais, responda com consistência e crie uma experiência mais clara para quem chega até sua empresa.
+          - generic [ref=e200]:
+            - link "Quero WhatsApp inteligente" [ref=e201] [cursor=pointer]:
+              - /url: "#contato"
+            - link "Ver integrações" [ref=e202] [cursor=pointer]:
+              - /url: "#solucoes"
+        - generic [ref=e205]:
+          - generic [ref=e206]:
+            - generic [ref=e207]:
+              - img [ref=e209]
+              - generic [ref=e212]:
+                - paragraph [ref=e213]: Ireix Assistant
+                - paragraph [ref=e214]: automacao ativa
+            - generic [ref=e215]: WhatsApp conectado
+          - generic [ref=e216]:
+            - generic [ref=e217]:
+              - paragraph [ref=e218]: Fluxo sugerido
+              - paragraph [ref=e219]: Qualificar leads e encaminhar proposta
+            - generic [ref=e220]: ativo
+          - generic [ref=e221]:
+            - generic [ref=e223]:
+              - paragraph [ref=e224]: Ola! Quero automatizar meu atendimento.
+              - paragraph [ref=e225]: 10:18
+            - generic [ref=e227]:
+              - paragraph [ref=e228]: Perfeito. Posso entender seu volume de mensagens e o principal objetivo?
+              - paragraph [ref=e229]: 10:18
+          - generic [ref=e230]:
+            - generic [ref=e231]: Escreva uma mensagem...
+            - img [ref=e233]
+      - generic [ref=e237]:
+        - generic [ref=e238]:
+          - generic [ref=e239]:
+            - paragraph [ref=e240]: CONTEÚDO E ESTRATÉGIA
+            - heading "Aprenda a usar tecnologia para vender mais e operar com menos esforço." [level=2] [ref=e241]
+            - paragraph [ref=e242]: Uma área de conteúdo fortalece autoridade, SEO e educação do cliente antes da conversa comercial.
+          - link "Ver todos os artigos" [ref=e244] [cursor=pointer]:
+            - /url: /blog
+        - generic [ref=e245]:
+          - article [ref=e247]:
+            - generic [ref=e248]:
+              - generic [ref=e249]: SEO
+              - img [ref=e251]
+            - heading "Como um site profissional gera leads todos os meses" [level=3] [ref=e255]
+            - paragraph [ref=e256]: Estrutura, performance, conteúdo e mensuração transformam uma página bonita em um canal de aquisição.
+            - link "Ler artigo" [ref=e257] [cursor=pointer]:
+              - /url: /blog#site-profissional-gera-leads
+              - text: Ler artigo
+              - img [ref=e258]
+          - article [ref=e261]:
+            - generic [ref=e262]:
+              - generic [ref=e263]: AUTOMAÇÃO
+              - img [ref=e265]
+            - heading "Quando automatizar o atendimento sem perder qualidade" [level=3] [ref=e269]
+            - paragraph [ref=e270]: Veja sinais de que sua empresa já pode ganhar tempo com WhatsApp, webhooks e fluxos inteligentes.
+            - link "Ler artigo" [ref=e271] [cursor=pointer]:
+              - /url: /blog#automatizar-atendimento
+              - text: Ler artigo
+              - img [ref=e272]
+          - article [ref=e275]:
+            - generic [ref=e276]:
+              - generic [ref=e277]: IA
+              - img [ref=e279]
+            - heading "Como aplicar IA em processos reais da empresa" [level=3] [ref=e282]
+            - paragraph [ref=e283]: Assistentes, classificação de mensagens e respostas com contexto podem reduzir gargalos operacionais.
+            - link "Ler artigo" [ref=e284] [cursor=pointer]:
+              - /url: /blog#ia-em-processos-reais
+              - text: Ler artigo
+              - img [ref=e285]
+      - generic [ref=e287]:
+        - generic: IREIX
+        - generic [ref=e288]:
+          - generic [ref=e289]:
+            - paragraph [ref=e290]: CONTATO
+            - heading "Vamos desenhar a próxima solução digital da sua empresa?" [level=2] [ref=e291]
+            - paragraph [ref=e292]: Conte rapidamente o que você precisa. Podemos começar por um site, MVP, sistema interno, integração com WhatsApp, automação ou consultoria técnica.
+            - list [ref=e293]:
+              - listitem [ref=e294]:
+                - img [ref=e295]
+                - generic [ref=e297]: Resposta inicial em até 24h úteis.
+              - listitem [ref=e298]:
+                - img [ref=e299]
+                - generic [ref=e301]: Diagnóstico objetivo antes da proposta.
+              - listitem [ref=e302]:
+                - img [ref=e303]
+                - generic [ref=e305]: Projetos com foco em performance, clareza e escala.
+            - link "Chamar no WhatsApp" [ref=e307] [cursor=pointer]:
+              - /url: "#contato"
+              - img [ref=e308]
+              - text: Chamar no WhatsApp
+          - generic [ref=e311]:
+            - heading "Solicite uma proposta" [level=3] [ref=e312]
+            - generic [ref=e313]:
+              - generic [ref=e314]:
+                - generic [ref=e315]:
+                  - text: Nome
+                  - textbox "Nome" [ref=e316]:
+                    - /placeholder: Seu nome
+                - generic [ref=e317]:
+                  - text: E-mail
+                  - textbox "E-mail" [ref=e318]:
+                    - /placeholder: voce@email.com
+              - generic [ref=e319]:
+                - text: Telefone / WhatsApp
+                - textbox "Telefone / WhatsApp" [ref=e320]:
+                  - /placeholder: (00) 00000-0000
+              - generic [ref=e321]:
+                - text: Tipo de projeto
+                - combobox "Tipo de projeto" [ref=e322]:
+                  - option "Selecione" [selected]
+                  - option "Site profissional"
+                  - option "Sistema web"
+                  - option "Automacao"
+                  - option "WhatsApp Business API"
+                  - option "IA para empresas"
+                  - option "SEO e performance"
+                  - option "MVP ou consultoria"
+                  - option "Outro"
+              - generic [ref=e323]:
+                - text: Mensagem
+                - textbox "Mensagem" [ref=e324]:
+                  - /placeholder: Conte um pouco sobre seu projeto...
+              - generic [ref=e325]:
+                - paragraph [ref=e326]: contato@ireixsolution.com
+                - button "Enviar mensagem" [ref=e327]
+              - paragraph
+    - contentinfo [ref=e328]:
+      - generic: IREIX
+      - generic [ref=e329]:
+        - generic [ref=e330]:
+          - generic [ref=e331]:
+            - img "Ireix Solution" [ref=e332]
+            - heading "Ireix Solution" [level=2] [ref=e333]
+            - paragraph [ref=e334]: Sites profissionais, presença digital e soluções para empresas que querem vender melhor, ganhar confiança e transformar visitantes em oportunidades.
+            - generic [ref=e335]:
+              - link "Falar no WhatsApp" [ref=e336] [cursor=pointer]:
+                - /url: "#contato"
+              - link "Solicitar proposta" [ref=e337] [cursor=pointer]:
+                - /url: "#contato"
+          - generic [ref=e338]:
+            - paragraph [ref=e339]: Serviços
+            - link "Sites profissionais" [ref=e340] [cursor=pointer]:
+              - /url: /#contato
+            - link "Sistemas web sob medida" [ref=e341] [cursor=pointer]:
+              - /url: /#contato
+            - link "Automações e integrações" [ref=e342] [cursor=pointer]:
+              - /url: /#contato
+            - link "WhatsApp Business API" [ref=e343] [cursor=pointer]:
+              - /url: /#contato
+            - link "IA para empresas" [ref=e344] [cursor=pointer]:
+              - /url: /#contato
+          - generic [ref=e345]:
+            - paragraph [ref=e346]: Empresa
+            - link "Processo" [ref=e347] [cursor=pointer]:
+              - /url: /#processo
+            - link "Blog" [ref=e348] [cursor=pointer]:
+              - /url: /blog
+            - link "Consultoria" [ref=e349] [cursor=pointer]:
+              - /url: /#contato
+            - link "Manutenção mensal" [ref=e350] [cursor=pointer]:
+              - /url: /#contato
+            - link "MVPs" [ref=e351] [cursor=pointer]:
+              - /url: /#contato
+          - generic [ref=e352]:
+            - paragraph [ref=e353]: Contato
+            - paragraph [ref=e354]: contato@ireixsolution.com
+            - paragraph [ref=e355]: WhatsApp comercial
+            - paragraph [ref=e356]: Atendimento remoto para todo o Brasil
+        - generic [ref=e358]:
+          - paragraph [ref=e359]: © 2026 Ireix Solution. Todos os direitos reservados.
+          - paragraph [ref=e360]: Estratégia digital · Software sob medida · IA aplicada
+  - button "Open Next.js Dev Tools" [ref=e366] [cursor=pointer]:
+    - img [ref=e367]
